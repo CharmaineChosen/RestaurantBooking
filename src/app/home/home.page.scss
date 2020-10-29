@@ -1,27 +1,37 @@
-#container {
-  text-align: center;
+// .container{
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100%;
+//   background-color: #3dc2ff;
+//   height:100%;
+// }
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+// ion-content{
+//   background: #3dc2ff;
+// }
+
+.background{
+  display: flex;
+  background-color: #3dc2ff;
+  height:100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
+// .container h1{
+//   display:flex;
+//   font-size: 8px;
+//   align-items: center;
+  
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+img{
+  display: flex;
+  width:250px;
+  // height:100px;
+  // margin-top: 200px;
+  margin-left: 50px;
+  
 }
