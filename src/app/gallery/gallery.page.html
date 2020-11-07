@@ -15,7 +15,6 @@
       <ion-segment-button value="regular">
         Regular
       </ion-segment-button>
-
       <ion-segment-button value="pinterest">
         Pinterest
       </ion-segment-button>
@@ -24,14 +23,14 @@
     <div [ngSwitch]="galleryType">
 
       <ion-grid *ngSwitchCase="'regular'">
-
         <ion-row>
-          <ion-col col-6 col-md-4 col-xl-3 *ngFor="let image of [1,2,3,4,5,6]">
+          <ion-col col-6 col-md-4 col-xl-3 *ngFor="let image of [1,2,3,4,4,6]">
             <div class="image-container" [style.background-image]="'url(assets/img' + image + '.jfif)'">
             </div>
           </ion-col>
         </ion-row>
       </ion-grid>
-
     </div>
+    
+    
   </ion-content>

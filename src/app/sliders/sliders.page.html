@@ -1,47 +1,43 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>sliders</ion-title>
-  </ion-toolbar>
+  
+    <ion-title>Collection</ion-title>
+
 </ion-header>
 
 
 
 <ion-content>
 
-  <ion-slides pager="true" [options]="slideOpts">
-    <ion-slide>
-      <h1>Slide 1</h1>
+  <ion-slides style="background-color:#3dc2ff; color:white" pager="true" [options]="slideOpts">
+
+    <ion-slide id= "background">
+      <!-- <p>Our menu listings</p> -->
+      <img src="assets/img/5.jfif" alt="next"> 
+      <p>Find your favourite restaurant!</p>
     </ion-slide>
-    <ion-slide>
-      <h1>Slide 2</h1>
+
+    <ion-slide id="background">
+      <!-- <p>Our Famous dish</p> -->
+      <img src="assets/img/reserve.jfif" alt="" > 
+      <p>Book a table.</p>
     </ion-slide>
-    <ion-slide>
-      <h1></h1>
+
+    <ion-slide id="background">
+      <!-- <p>One of our restaurants</p> -->
+      <img src="assets/img/6.jfif" alt="">
+      <p>Dine with us!!</p>
+    </ion-slide>
 
       <div class="container-form-btn">
-
-
-      
-
-      
-
       <ion-fab slot="fixed">
         <ion-fab-button>
           <ion-icon name="arrow-forward" (click)="btnClicked()"></ion-icon>
         </ion-fab-button>
       </ion-fab>
-
     </div>
-
-    </ion-slide>
+    
 
  
-
-  
-
   </ion-slides>
-
- 
-
 
 </ion-content>

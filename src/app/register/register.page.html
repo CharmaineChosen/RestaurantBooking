@@ -9,44 +9,40 @@
 
   <div class="ion-padding">
 
-    <form class="ion-padding">
+    <form [formGroup]="registerForm" (ngSubmit)="btnClicked()" class="ion-padding">
 
       <div class="wrap-input">
-        <input class="input" type="text" name="name" placeholder="Restaurant Name">
+        <input class="input" type="text" formControlName="name" name="name" placeholder="Name">
+      </div>
+
+      <!-- <div class="wrap-input">
+        <input class="input" type="text"  formControlName="regnumber" name="regnumber" placeholder="Registration Number">
+      </div> -->
+
+      <div class="wrap-input">
+        <input class="input" type="text" formControlName="email" name="email" placeholder="Email">
+      </div>
+
+      <!-- <div class="wrap-input">
+        <input class="input" type="text" formControlName="address" name="address" placeholder="Address">
+      </div> -->
+
+      <div class="wrap-input">
+        <input class="input" type="text" formControlName="telephone" name="telephone" placeholder="Telephone Number">
       </div>
 
       <div class="wrap-input">
-        <input class="input" type="text" name="reg-number" placeholder="Registration Number">
-      </div>
-
-      <div class="wrap-input">
-        <input class="input" type="text" name="email" placeholder="Email">
-      </div>
-
-      <div class="wrap-input">
-        <input class="input" type="text" name="address" placeholder="Address">
-      </div>
-
-      <div class="wrap-input">
-        <input class="input" type="text" name="telephone" placeholder="Telephone Number">
-      </div>
-
-      <div class="wrap-input">
-        <input class="input" type="password" name="password" placeholder="Password">
+        <input class="input" type="password" formControlName="password" name="password" placeholder="Password">
       </div>
 
       <div class="container-form-btn">
-        <button (click)="btnClicked(login)" class="form-btn custom-font">
+        <button class="form-btn custom-font">
           Register
         </button>
       </div>
 
-
-
-
-
-
     </form>
+
 
   </div>
 

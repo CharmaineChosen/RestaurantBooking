@@ -1,6 +1,6 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title class="ion-text-center custom-font">login</ion-title>
+    <ion-title class="ion-text-center custom-font">Restaurant login</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -16,23 +16,26 @@
 
   <div class="ion-padding">
 
-    <form class="ion-padding">
+    <form [formGroup]="loginForm" (ngSubmit)="btnClicked()" class="ion-padding">  
 
       <div class="wrap-input">
-        <input class="input" type="text" name="username" placeholder="Username">
+        <input class="input" type="text" formControlName="email" name="email" placeholder="your@email.com" ngModel required>
       </div>
 
       <div class="wrap-input">
-        <input class="input" type="password" name="password" placeholder="Password">
+        <input class="input" type="password" formControlName="password" name="password" placeholder="Password" ngModel required>
       </div>
 
       <div class="container-form-btn">
-        <button class="form-btn custom-font">
+        <button (click)="btnClicked(dashboard)" class="form-btn custom-font">
           Sign In
         </button>
       </div>
 
       </form>
       </div>
+      <!-- <div style="text-align: center;margin: auto;">
+      <h6 (click)="goToReset()">Forget Password</h6>
+      </div> -->
 
 </ion-content>

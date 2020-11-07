@@ -1,0 +1,45 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button defaultHref="daily-dishes"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center custom-font">add-menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-padding">
+
+    <form [formGroup]="menuForm" (ngSubmit)="btnClicked()" class="ion-padding">
+  
+      <div class="wrap-input">
+        <ion-item>
+          <ion-input type="text" formControlName="name" placeholder="Dish Name"></ion-input>
+        </ion-item>
+      </div>
+  
+      <div class="wrap-input">
+        <ion-item>
+          <ion-input type="text"  formControlName="price" placeholder="Price"></ion-input>
+        </ion-item>
+      </div>
+  
+      <div class="wrap-input">
+        
+          <ion-input type="file" formControlName="img" accept="image/*" (change)="onselected($event)"></ion-input>
+        
+      </div>
+  
+      <div class="container-form-btn">
+        <button class="form-btn custom-font">
+          Add new Dish
+        </button>
+      </div>
+  
+    </form>
+  
+  </div>
+  
+
+</ion-content>

@@ -14,11 +14,16 @@
   </ion-toolbar>
 </ion-header> -->
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  
   <div class="background">
+    <h1>Welcome to The Dine!</h1>
+    <p>Your favourite restaurant locator.</p>
+    <div style="text-align: center;margin: auto;">
+      <ion-button (click)="logOut()" color="light" shape="round">Log out</ion-button>
+    
+    </div>
 
-
- 
   </div>
     
 

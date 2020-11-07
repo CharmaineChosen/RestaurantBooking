@@ -1,5 +1,7 @@
 {
   "name": "dine restaurant",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

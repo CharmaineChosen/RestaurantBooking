@@ -43,6 +43,58 @@ const routes: Routes = [
     path: 'calendar',
     loadChildren: () => import('./calendar/calendar.module').then( m => m.CalendarPageModule)
   },
+  {
+    path: 'password-reset',
+    loadChildren: () => import('./password-reset/password-reset.module').then( m => m.PasswordResetPageModule)
+  },
+  {
+    path: 'user-register',
+    loadChildren: () => import('./user-register/user-register.module').then( m => m.UserRegisterPageModule)
+  },
+  {
+    path: 'user-login',
+    loadChildren: () => import('./user-login/user-login.module').then( m => m.UserLoginPageModule)
+  },
+  {
+    path: 'explore-restaurants',
+    loadChildren: () => import('./explore-restaurants/explore-restaurants.module').then( m => m.ExploreRestaurantsPageModule)
+  },
+  {
+    path: 'reservation',
+    loadChildren: () => import('./reservation/reservation.module').then( m => m.ReservationPageModule)
+  },
+  {
+    path: 'booking-details',
+    loadChildren: () => import('./booking-details/booking-details.module').then( m => m.BookingDetailsPageModule)
+  },
+  {
+    path: 'success',
+    loadChildren: () => import('./success/success.module').then( m => m.SuccessPageModule)
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'user-profile',
+    loadChildren: () => import('./user-profile/user-profile.module').then( m => m.UserProfilePageModule)
+  },
+  {
+    path: 'daily-dishes',
+    loadChildren: () => import('./daily-dishes/daily-dishes.module').then( m => m.DailyDishesPageModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+  },
+  {
+    path: 'add-restaurants',
+    loadChildren: () => import('./add-restaurants/add-restaurants.module').then( m => m.AddRestaurantsPageModule)
+  },
+  {
+    path: 'add-menu',
+    loadChildren: () => import('./add-menu/add-menu.module').then( m => m.AddMenuPageModule)
+  },
 ];
 
 @NgModule({

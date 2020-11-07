@@ -1,0 +1,48 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <div class="back-circle"></div>
+    <ion-title class="ion-text-center custom-font">User Registration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-padding">
+
+    <form [formGroup]="userForm" (ngSubmit)="btnClicked()" class="ion-padding">
+
+      <div class="wrap-input">
+        <input class="input" type="text" formControlName="firstname" name="name" placeholder="Firstname">
+      </div>
+
+      <div class="wrap-input">
+        <input class="input" type="text"  formControlName="lastname" name="lastname" placeholder="Lastname">
+      </div>
+
+      <div class="wrap-input">
+        <input class="input" type="text" formControlName="email" name="email" placeholder="Email">
+      </div>
+
+      <div class="wrap-input">
+        <input class="input" type="password" formControlName="password" name="password" placeholder="Password">
+      </div>
+
+      <div class="container-form-btn">
+        <button (click)="btnClicked()" class="form-btn custom-font">
+         Sign Up
+        </button>
+      </div>
+
+    </form>
+
+
+  </div>
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <p class="ion-text-center custom-font">Already have an account? 
+      <a href="user-login">Sign In</a></p>
+  </ion-toolbar>
+</ion-footer>

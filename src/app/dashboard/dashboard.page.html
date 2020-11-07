@@ -1,0 +1,53 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title class="ion-text-center custom-font">Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="background">
+
+  <ion-button (click)="logOut()" color="light" shape="round">Log out</ion-button>
+
+  <ion-card routerLink="/profile">
+    <ion-card-header>
+      <ion-icon name="person"></ion-icon>
+      <ion-card-title>Profile</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+   
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card routerLink="/daily-dishes" class="card2">
+    <ion-card-header>
+      <ion-icon name="menu" size="large"></ion-icon>
+      <ion-card-title>Menu</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card routerLink="/bookings" class="card3">
+    <ion-card-header>
+      <ion-icon name="calendar" size="large"></ion-icon>
+      <ion-card-title>Bookings</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card routerLink="/settings" class="card4">
+    <ion-card-header>
+      <ion-icon name="settings" size="large"></ion-icon>
+      <ion-card-title>Settings</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+   
+    </ion-card-content>
+  </ion-card>
+  </div>
+</ion-content>

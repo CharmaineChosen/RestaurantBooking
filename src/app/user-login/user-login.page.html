@@ -1,0 +1,38 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title class="ion-text-center custom-font">User login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="bakground">
+
+  
+    <img src="./assets/pic2.jpg"/>
+
+  
+</div>
+
+  <div class="ion-padding">
+
+    <form [formGroup]="userloginForm" (ngSubmit)="btnClicked()" class="ion-padding">  
+
+      <div class="wrap-input">
+        <input class="input" type="text" formControlName="email" name="email" placeholder="your@email.com" ngModel required>
+      </div>
+
+      <div class="wrap-input">
+        <input class="input" type="password" formControlName="password" name="password" placeholder="Password" ngModel required>
+      </div>
+
+      <div class="container-form-btn">
+        <button (click)="btnClicked(dinehome)" class="form-btn custom-font">
+          Sign In
+        </button>
+      </div>
+
+      </form>
+      </div>
+
+</ion-content>

@@ -1,0 +1,40 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="light">
+    <ion-buttons>
+      <ion-back-button defaultHref="dinehome"></ion-back-button>
+    </ion-buttons>
+    <ion-title  class="ion-text-center custom-font">Explore Restaurants</ion-title>
+  
+  </ion-toolbar>
+  
+</ion-header>
+
+
+<ion-content>
+ 
+  <ion-toolbar color="light">
+<ion-searchbar (ionInput)="FilterJSONData($event)"></ion-searchbar>
+</ion-toolbar>
+
+<ion-list>
+  <ion-item (click)="selectVal(item.name)" *ngFor="let item of jsonData">
+    {{item.name}}</ion-item>
+</ion-list>
+
+
+  <div class="background-color">
+
+  <p><img src="assets/img/macD.jpg" ></p>
+  <p><img src="assets/img/5.jfif" ></p>
+  <p><img src="assets/img/boston.jfif" ></p>
+  <p><img src="assets/img/billy.jpg" ></p>
+  <p><img src="assets/img/mythos.jfif" ></p>
+  <p><img src="assets/img/koi.jfif" ></p>
+  <p><img src="assets/img/roco.jfif" ></p>
+  <p><img src="assets/img/galitos.jpg" ></p>
+  <p><img src="assets/img/hussar.jpg" ></p>
+  <p><img src="assets/img/thava.jpg" ></p>
+ 
+</div>
+</ion-content>
+

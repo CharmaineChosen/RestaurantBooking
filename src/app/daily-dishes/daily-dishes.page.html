@@ -1,0 +1,52 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button defaultHref="dashboard"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center custom-font">Daily Dishes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+
+    <!-- <ion-avatar class="ion-margin-start">
+      <img src="">
+    </ion-avatar>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>
+            Dish name:
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>
+            Price:
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row> -->
+
+    <ion-card *ngFor="let item of menu">
+      <img src="{{item.img}}" />
+      <ion-card-header>
+        <ion-card-subtitle>{{item.name}}</ion-card-subtitle>
+        <ion-card-title>R{{item.price}}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+  </ion-grid>
+
+
+  <ion-button (click)="addMenus()">Add new Dish</ion-button>
+
+
+</ion-content>

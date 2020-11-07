@@ -1,0 +1,68 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button defaultHref="profile"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center custom-font">Add Restaurants</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-padding">
+
+    <form [formGroup]="restaurantForm" (ngSubmit)="btnClicked()" class="ion-padding">
+
+      <div class="wrap-input">
+        <ion-item>
+          <ion-input type="text" formControlName="name" placeholder="Restaurant Name"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="wrap-input">
+        <ion-item>
+          <ion-input type="text"  formControlName="regnumber" placeholder="Registration Number"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="wrap-input">
+        <ion-item>
+          <ion-input type="text" formControlName="email" placeholder="Email"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="wrap-input">
+        <ion-item>
+          <ion-input type="text" formControlName="address" placeholder="Address"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="wrap-input">
+        <ion-item>
+          <ion-input type="text" formControlName="telephone" placeholder="Telephone Number"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="wrap-input">
+        <ion-item>
+          <ion-input type="file" formControlName="img" accept="image/*" (change)="onselected($event)"></ion-input>
+        </ion-item>
+      </div>
+
+      <!-- <div class="wrap-input">
+        <input class="input" type="password" formControlName="password" name="password" placeholder="Password">
+      </div> -->
+
+      <div class="container-form-btn">
+        <button class="form-btn custom-font">
+          Add Restaurant
+        </button>
+      </div>
+
+    </form>
+
+
+  </div>
+
+
+</ion-content>
