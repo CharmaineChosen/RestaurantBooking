@@ -35,23 +35,7 @@ export class RegisterPage implements OnInit {
     })
   }
 
-  // btnClicked(){
-  //   this.authService.registerRestaurant().add({
-  //           //ownerId: this.ownerId,
-  //           name: this.registerForm.value.name,
-  //           regnumber: this.registerForm.value.regnumber,
-  //           email: this.registerForm.value.email,
-  //            telephone: this.registerForm.value. telephone,
-  //           password: this.registerForm.value.password,
-  //           address: this.registerForm.value.address
-  //         }).then(function(docRef){
-  //           console.log("Document written with ID: ", docRef.id);
-  //         }).catch(function(error){
-  //           console.log(error);
-  //         });
-  //         this.registerForm.reset();
-      
-  // }
+
 
  
   async btnClicked():Promise<void>{
@@ -76,5 +60,9 @@ export class RegisterPage implements OnInit {
         await alert.present();
       }
     );
+  }
+
+  test(){
+
   }
 }

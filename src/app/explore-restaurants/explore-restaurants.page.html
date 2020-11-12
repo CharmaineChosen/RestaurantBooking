@@ -1,40 +1,59 @@
 <ion-header class="ion-no-border">
-  <ion-toolbar color="light">
+  <ion-toolbar>
     <ion-buttons>
       <ion-back-button defaultHref="dinehome"></ion-back-button>
     </ion-buttons>
-    <ion-title  class="ion-text-center custom-font">Explore Restaurants</ion-title>
-  
+
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-center custom-font">Explore Restaurants</ion-title>
+
   </ion-toolbar>
-  
+
 </ion-header>
 
 
 <ion-content>
- 
-  <ion-toolbar color="light">
-<ion-searchbar (ionInput)="FilterJSONData($event)"></ion-searchbar>
-</ion-toolbar>
 
-<ion-list>
-  <ion-item (click)="selectVal(item.name)" *ngFor="let item of jsonData">
-    {{item.name}}</ion-item>
-</ion-list>
+  <!-- <ion-toolbar color="light">
+    <ion-searchbar (ionInput)="FilterJSONData($event)"></ion-searchbar>
+  </ion-toolbar> -->
+
+  <ion-list>
+    <ion-item (click)="selectVal(item.name)" *ngFor="let item of jsonData">
+      {{item.name}}</ion-item>
+  </ion-list>
+
+  <ion-card *ngFor="let list of listing">
+    <ion-item>
+      <img src="{{list.img}}" alt="" [routerLink]="'/view-restaurant/'+list?.ownerId">
+      
+      <!-- <ion-label>ion-item in a card, icon left, button right</ion-label> -->
+      <!-- <ion-button fill="outline" slot="end">View</ion-button> -->
+    </ion-item>
+    <ion-card-subtitle>{{list.name}} - {{list.address}}</ion-card-subtitle>
+  
+    <!-- <ion-card-content>
+      This is content, without any paragraph or header tags,
+      within an ion-card-content element.
+    </ion-card-content> -->
+  </ion-card>
 
 
-  <div class="background-color">
+  <!-- <div class="background-color">
 
-  <p><img src="assets/img/macD.jpg" ></p>
-  <p><img src="assets/img/5.jfif" ></p>
-  <p><img src="assets/img/boston.jfif" ></p>
-  <p><img src="assets/img/billy.jpg" ></p>
-  <p><img src="assets/img/mythos.jfif" ></p>
-  <p><img src="assets/img/koi.jfif" ></p>
-  <p><img src="assets/img/roco.jfif" ></p>
-  <p><img src="assets/img/galitos.jpg" ></p>
-  <p><img src="assets/img/hussar.jpg" ></p>
-  <p><img src="assets/img/thava.jpg" ></p>
- 
-</div>
+    <p><img src="assets/img/macD.jpg"></p>
+    <p><img src="assets/img/5.jfif"></p>
+    <p><img src="assets/img/boston.jfif"></p>
+    <p><img src="assets/img/billy.jpg"></p>
+    <p><img src="assets/img/mythos.jfif"></p>
+    <p><img src="assets/img/koi.jfif"></p>
+    <p><img src="assets/img/roco.jfif"></p>
+    <p><img src="assets/img/galitos.jpg"></p>
+    <p><img src="assets/img/hussar.jpg"></p>
+    <p><img src="assets/img/thava.jpg"></p>
+
+  </div> -->
 </ion-content>
-

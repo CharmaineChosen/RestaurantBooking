@@ -28,6 +28,7 @@
     "firebase": "^8.0.0",
     "ionic-angular": "^3.9.10",
     "ionic-gallery-modal": "^0.2.7",
+    "moment": "^2.29.1",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"

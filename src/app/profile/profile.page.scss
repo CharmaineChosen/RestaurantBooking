@@ -8,3 +8,15 @@
     justify-content: center;
   
   }
+
+  .container-form-btn {
+    display: flex;
+    justify-content: center;
+    color: yellow;
+}
+
+ion-button{
+  --background:yellow;
+  --color:black;
+  font-family: Josefin Sans;
+}

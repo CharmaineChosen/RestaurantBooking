@@ -60,7 +60,7 @@ const routes: Routes = [
     loadChildren: () => import('./explore-restaurants/explore-restaurants.module').then( m => m.ExploreRestaurantsPageModule)
   },
   {
-    path: 'reservation',
+    path: 'reservation/:id',
     loadChildren: () => import('./reservation/reservation.module').then( m => m.ReservationPageModule)
   },
   {
@@ -94,6 +94,10 @@ const routes: Routes = [
   {
     path: 'add-menu',
     loadChildren: () => import('./add-menu/add-menu.module').then( m => m.AddMenuPageModule)
+  },
+  {
+    path: 'view-restaurant/:id',
+    loadChildren: () => import('./view-restaurant/view-restaurant.module').then( m => m.ViewRestaurantPageModule)
   },
 ];
 

@@ -29,7 +29,7 @@ export class UserLoginPage implements OnInit {
     this.authService.loginUser(this.userloginForm.value.email, this.userloginForm.value.password).
     then(
       ()=>{
-        this.router.navigateByUrl('dinehome');
+        this.router.navigateByUrl('explore-restaurants');
       },
       async error => {
         const alert = await this.alertCtrl.create({

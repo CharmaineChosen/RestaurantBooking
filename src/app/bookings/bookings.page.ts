@@ -17,12 +17,14 @@ export class BookingsPage implements OnInit {
   constructor(private fb: FormBuilder,private authService: AuthService,private router: Router) { }
 
   ngOnInit() {
-    var user = firebase.auth().currentUser.uid;
+    let user = firebase.auth().currentUser.uid;
 
     //fetching all the bookings from firebase
-    firebase.firestore().collection('restaurants').doc(user).collection('bookings').where('ownerId', '==' , user).onSnapshot(res => {
+    firebase.firestore().collection('restaurants').doc(user).collection('booking-details').where('ownerId', '==' , user).onSnapshot(res => {
       res.forEach(element => {
         this.bookings.push(element.data());
+        console.log(this.bookings);
+        
       });
     });
 

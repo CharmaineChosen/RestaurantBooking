@@ -22,7 +22,8 @@ ion-slides {
   }
 
   #background img{
-    width:100%;
+    // width:400px;
+    height:200px;
     margin-left:20px;
   }
 
@@ -30,7 +31,15 @@ ion-slides {
    
     font-size:50px;
     color:red;
-    float:left;
-    
+    float:left;  
+  }
+
+  ion-card{
+    height:250px;
+    // width:400px;
+  }
+
+  ion-card-subtitle{
+    color:black;
   }
  

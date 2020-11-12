@@ -10,7 +10,8 @@
 <ion-content fullscreen>
 
   <ion-avatar class="ion-margin-start">
-    <img src="./assets/avatar1.png">
+    <!-- <img src="./assets/avatar1.png"> -->
+    <img src="{{user?.img}}">
   </ion-avatar> 
 
   <ion-grid>
@@ -19,7 +20,7 @@
       <ion-col>
         <ion-item>
           <ion-label>
-            Firstname:
+            Firstname: {{user?.firstname}} 
           </ion-label>
         </ion-item>
       </ion-col>
@@ -29,7 +30,7 @@
       <ion-col>
         <ion-item>
           <ion-label>
-           Lastname:
+           Lastname: {{user?.lastname}} 
           </ion-label>
         </ion-item>
       </ion-col>
@@ -39,24 +40,14 @@
       <ion-col>
         <ion-item>
           <ion-label>
-            Email:
-          </ion-label>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-
-
-    <ion-row>
-      <ion-col>
-        <ion-item>
-          <ion-label>
-            Cellphone:
+            Email: {{user?.email}} 
           </ion-label>
         </ion-item>
       </ion-col>
     </ion-row>
 
   </ion-grid>
+  <ion-button (click)="newUser()">new user</ion-button>
 
 
 </ion-content>

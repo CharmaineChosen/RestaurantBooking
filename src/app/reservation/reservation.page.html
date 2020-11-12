@@ -12,45 +12,45 @@
 
   <div class="ion-padding">
 
-    <form  [formGroup]="reservationForm" (ngSubmit)="btnClicked()" class="ion-padding">
+    <form  [formGroup]="reservationForm" (ngSubmit)="submit()" class="ion-padding">
 
       <div class="wrap-input">
-        <input class="input" type="text"  formControlName="firstname" name="firstname" placeholder="Firstname" ngModel required>
+        <input class="input" type="text"  formControlName="firstname" placeholder="Firstname" ngModel required>
       </div>
 
       <div class="wrap-input">
-        <input class="input" type="text"   formControlName="lastname" name="lastname" placeholder="Lastname" ngModel required>
+        <input class="input" type="text"   formControlName="lastname"  placeholder="Lastname" ngModel required>
       </div>
 
       <div class="wrap-input">
-        <input class="input" type="text"  formControlName="email" name="email" placeholder="your@email.com" ngModel required>
+        <input class="input" type="text"  formControlName="email" placeholder="your@email.com" ngModel required>
       </div>
 
       <div class="wrap-input">
-        <input class="input" type="number" formControlName="phone"  name="phone" placeholder="Phone" ngModel required>
+        <input class="input" type="number" formControlName="phone"   placeholder="Phone" ngModel required>
       </div>
 
       <div class="wrap-input">
-        <input class="input" type="text"  formControlName="guests" name="guests" placeholder="Number of guests"ngModel required>
+        <input class="input" type="text"  formControlName="guestnumber"  placeholder="Number of guests"ngModel required>
       </div>
 
       <label>Reservation</label>
       <ion-item>
         <ion-label position="floating">MM/DD/YYYY</ion-label>
-        <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09"></ion-datetime>
+        <ion-datetime formControlName="date" displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09"></ion-datetime>
       </ion-item>
 
-      <ion-item>
+      <!-- <ion-item>
         <ion-label>Table Reservation:</ion-label>
-        <ion-select>
+        <ion-select formControlName="">
           <ion-select-option value="brown">Yes</ion-select-option>
           <ion-select-option value="blonde">No</ion-select-option>
         </ion-select>
-      </ion-item>
+      </ion-item> -->
 
       <ion-item>
         <ion-label>Reservation Type:</ion-label>
-        <ion-select>
+        <ion-select formControlName="reservationtype">
           <ion-select-option value="brown">Please select</ion-select-option>
           <ion-select-option value="blonde">Dinner</ion-select-option>
           <ion-select-option value="black">Birthday/Anniversary</ion-select-option>
@@ -60,13 +60,13 @@
       </ion-item>
 
       <div class="container-form-btn">
-        <button (click)="btnClicked()" class="form-btn custom-font">
+        <button class="form-btn custom-font">
           Book a table
         </button>
       </div>
 
     </form>
-
+  </div>
 
   </div>
 

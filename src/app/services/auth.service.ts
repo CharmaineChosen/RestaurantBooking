@@ -28,6 +28,13 @@ export class AuthService {
     return firebase.auth().createUserWithEmailAndPassword(email, password)
   }
 
+  signUp(
+    email: string,
+    password: string
+  ): Promise<any> {
+    return firebase.auth().createUserWithEmailAndPassword(email, password)
+  }
+
     
 
   // Add restaurant
