@@ -3,7 +3,7 @@
     <ion-buttons>
       <ion-back-button defaultHref="daily-dishes"></ion-back-button>
     </ion-buttons>
-    <ion-title class="ion-text-center custom-font">add-menu</ion-title>
+    <ion-title class="ion-text-center custom-font">Add Menu</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -15,13 +15,13 @@
   
       <div class="wrap-input">
         <ion-item>
-          <ion-input type="text" formControlName="name" placeholder="Dish Name"></ion-input>
+          <ion-input type="text" formControlName="name" placeholder="Dish Name" ngModel required ></ion-input>
         </ion-item>
       </div>
   
       <div class="wrap-input">
         <ion-item>
-          <ion-input type="text"  formControlName="price" placeholder="Price"></ion-input>
+          <ion-input type="number"  formControlName="price" placeholder="Price" maxlength="3" ngModel required></ion-input>
         </ion-item>
       </div>
   

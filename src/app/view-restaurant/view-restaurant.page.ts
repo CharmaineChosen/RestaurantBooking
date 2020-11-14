@@ -11,6 +11,7 @@ import 'firebase/firestore';
 export class ViewRestaurantPage implements OnInit {
 
   id: any;
+  menus: Array<any> = []
 
   restaurants: any = [];
 
@@ -19,10 +20,19 @@ export class ViewRestaurantPage implements OnInit {
   ngOnInit() {
     this.id = this.activatedActivated.snapshot.paramMap.get('id')
 
+    // fetching restaurant by Id
     firebase.firestore().collection('restaurants').doc(this.id).get().then(snapshot => {
       this.restaurants = snapshot.data();
       console.log('new data: ', this.restaurants)
     }); 
+
+    // fetching lists of menus
+    firebase.firestore().collection('restaurants').doc(this.id).collection('menu').get().then(snapshot => {
+      snapshot.forEach(doc => {
+        this.menus.push(doc.data())
+        console.log('new menus: ', this.menus)
+      })
+    });
 
   } 
   

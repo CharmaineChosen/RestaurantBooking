@@ -27,18 +27,28 @@
       </div>
 
       <div class="wrap-input">
-        <input class="input" type="number" formControlName="phone"   placeholder="Phone" ngModel required>
+        <input class="input" type="number" formControlName="phone"   placeholder="Phone" maxlength="10" ngModel required >
       </div>
 
       <div class="wrap-input">
-        <input class="input" type="text"  formControlName="guestnumber"  placeholder="Number of guests"ngModel required>
+        <input class="input" type="number"  formControlName="guestnumber"  placeholder="Number of guests"ngModel required>
       </div>
 
       <label>Reservation</label>
+      <label>Date:</label>
       <ion-item>
-        <ion-label position="floating">MM/DD/YYYY</ion-label>
-        <ion-datetime formControlName="date" displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09"></ion-datetime>
+        <ion-label position="floating">MM / DD /YYYY</ion-label>
+        <ion-datetime (click)="disableData()" name="CheckIndate"  picker-format="YYYY - MM - DD"
+            formControlName="date" placeholder="" ngModel required></ion-datetime>
       </ion-item>
+
+      <label>Time:</label>
+      <ion-item>
+        <ion-label>HH:mm</ion-label>
+        <!-- <ion-datetime displayFormat="HH:mm" formControlName="time" ngModel required></ion-datetime> -->
+        <ion-datetime displayFormat=" HH : mm" formControlName="time" ></ion-datetime>
+      </ion-item>
+      
 
       <!-- <ion-item>
         <ion-label>Table Reservation:</ion-label>
@@ -48,14 +58,14 @@
         </ion-select>
       </ion-item> -->
 
+      <label>Reservation Type:</label>
       <ion-item>
-        <ion-label>Reservation Type:</ion-label>
-        <ion-select formControlName="reservationtype">
-          <ion-select-option value="brown">Please select</ion-select-option>
-          <ion-select-option value="blonde">Dinner</ion-select-option>
-          <ion-select-option value="black">Birthday/Anniversary</ion-select-option>
-          <ion-select-option value="red">Corporate</ion-select-option>
-          <ion-select-option value="red">Other</ion-select-option>
+        <ion-label>Select</ion-label>
+        <ion-select formControlName="reservationtype" ngModel required>
+          <ion-select-option value="Dinner">Dinner</ion-select-option>
+          <ion-select-option value="Birthday">Birthday/Anniversary</ion-select-option>
+          <ion-select-option value="Corporate">Corporate</ion-select-option>
+          <ion-select-option value="Other">Other</ion-select-option>
         </ion-select>
       </ion-item>
 

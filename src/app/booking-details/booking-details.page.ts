@@ -46,6 +46,8 @@ export class BookingDetailsPage implements OnInit {
       })
     })
 
+    
+
   //   var user = firebase.auth().currentUser;
   //   this.userId = user.uid;
   //   console.log('userId: ', this.userId)

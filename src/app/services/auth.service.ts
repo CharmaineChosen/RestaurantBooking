@@ -21,11 +21,15 @@ export class AuthService {
   }
 
 
-  signUpUser(
-    email: string,
-    password: string
-  ): Promise<any> {
-    return firebase.auth().createUserWithEmailAndPassword(email, password)
+  // signUpUser(
+  //   email: string,
+  //   password: string
+  // ): Promise<any> {
+  //   return firebase.auth().createUserWithEmailAndPassword(email, password)
+  // }
+
+  signUpUser(email, password): Promise<any>{
+    return firebase.auth().createUserWithEmailAndPassword(email, password);
   }
 
   signUp(
@@ -34,6 +38,8 @@ export class AuthService {
   ): Promise<any> {
     return firebase.auth().createUserWithEmailAndPassword(email, password)
   }
+
+  
 
     
 
@@ -55,6 +61,20 @@ export class AuthService {
   logOutUser(): Promise<void> {
     return firebase.auth().signOut();
   }
+
+  bookingStatus(ownerId, userId, value){
+    var db = firebase.firestore();
+    var restaurantRef = db.collection('restaurants').doc(ownerId);
+    var restaurant = Promise.all([
+      restaurantRef.collection('booking-details').doc(userId).set({
+        status: value
+      }, { merge: true }).then(a => {
+        console.log('Changed')
+      })
+    ])
+  }
+
+
 }
 
 

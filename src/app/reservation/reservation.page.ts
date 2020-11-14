@@ -35,6 +35,7 @@ export class ReservationPage implements OnInit {
       lastname: ['', Validators.required],
       phone: ['', Validators.required],
       date: ['', Validators.required],
+      time: ['', Validators.required],
       guestnumber: ['', Validators.required],
       reservationtype: ['', Validators.required]
     })
@@ -55,13 +56,14 @@ export class ReservationPage implements OnInit {
       userId: this.userId,
       ownerId: this.uid,
       date: this.reservationForm.value.date,
-      // time: this.reservationForm.value.time,
+      time: this.reservationForm.value.time,
       guestnumber: this.reservationForm.value.guestnumber,
       reservationtype: this.reservationForm.value.reservationtype,
       firstname: this.reservationForm.value.firstname,
       lastname: this.reservationForm.value.lastname,
       phone: this.reservationForm.value.phone,
-      email: this.reservationForm.value.email
+      email: this.reservationForm.value.email,
+      status: 'Pending'
     }).then(function (docRef) {
       console.log("Document booking: ", docRef);
     }).catch(function (error) {
@@ -71,6 +73,11 @@ export class ReservationPage implements OnInit {
     this.reservationForm.reset();
   }
 
+  disableData() {
+    var today = new Date().toISOString().split('T')[0]; 
+    document.getElementsByName("CheckIndate")[0].setAttribute('min', today); 
+    // console.log(today);
+  }
 
   // btnClicked(){}
 
