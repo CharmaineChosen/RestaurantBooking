@@ -1,48 +1,55 @@
 <ion-header class="ion-no-border">
-  <ion-toolbar>
+  <!-- <ion-toolbar>
     <div class="back-circle"></div>
-    <ion-title class="ion-text-center custom-font">Register</ion-title>
-  </ion-toolbar>
+    <ion-title class="ion-text-center custom-font"></ion-title>
+  </ion-toolbar> -->
 </ion-header>
 
 <ion-content>
 
-  <div class="ion-padding">
+  <div class="content">
 
-    <form [formGroup]="registerForm" (ngSubmit)="btnClicked()" class="ion-padding">
-
-      <div class="wrap-input">
-        <input class="input" type="text" formControlName="name" name="name" placeholder="Name" ngModel required>
-      </div>
-
-      <!-- <div class="wrap-input">
-        <input class="input" type="text"  formControlName="regnumber" name="regnumber" placeholder="Registration Number">
-      </div> -->
-
-      <div class="wrap-input">
-        <input class="input" type="text" formControlName="email" name="email" placeholder="Email" ngModel required>
-      </div>
-
-      <!-- <div class="wrap-input">
-        <input class="input" type="text" formControlName="address" name="address" placeholder="Address">
-      </div> -->
-
-      <div class="wrap-input">
-        <input class="input" type="text" formControlName="telephone" name="telephone" placeholder="Telephone Number" maxlength="10" ngModel required>
-      </div>
-
-      <div class="wrap-input">
-        <input class="input" type="password" formControlName="password" name="password" placeholder="Password" ngModel required>
-      </div>
-
-      <div class="container-form-btn">
-        <button class="form-btn custom-font">
-          Register
-        </button>
-      </div>
-
-    </form>
-
+    <div class="img">
+      <img style="width:100px;" src="./assets/diner.png" />
+    </div>
+  
+    <div class="ion-padding">
+      <form [formGroup]="registerForm" (ngSubmit)="btnClicked()" class="ion-padding">
+  
+        <div class="wrap-input">
+          <input class="input" type="text" formControlName="name" name="name" placeholder="Name" ngModel required>
+        </div>
+  
+        <!-- <div class="wrap-input">
+          <input class="input" type="text"  formControlName="regnumber" name="regnumber" placeholder="Registration Number">
+        </div> -->
+  
+        <div class="wrap-input">
+          <input class="input" type="text" formControlName="email" name="email" placeholder="Email" ngModel required>
+        </div>
+  
+        <!-- <div class="wrap-input">
+          <input class="input" type="text" formControlName="address" name="address" placeholder="Address">
+        </div> -->
+  
+        <div class="wrap-input">
+          <input class="input" type="text" formControlName="telephone" name="telephone" placeholder="Telephone Number"
+            maxlength="10" ngModel required>
+        </div>
+  
+        <div class="wrap-input">
+          <input class="input" type="password" formControlName="password" name="password" placeholder="Password" ngModel
+            required>
+        </div>
+  
+        <div class="container-form-btn">
+          <button class="form-btn custom-font">
+            Register
+          </button>
+        </div>
+  
+      </form>
+    </div>
 
   </div>
 
@@ -51,7 +58,7 @@
 
 <ion-footer class="ion-no-border">
   <ion-toolbar>
-    <p class="ion-text-center custom-font">Already have an account? 
+    <p class="ion-text-center custom-font">Already have an account?
       <a href="login">Sign In</a></p>
   </ion-toolbar>
 </ion-footer>

@@ -1,40 +1,46 @@
-<ion-header class="ion-no-border">
+<!-- <ion-header class="ion-no-border">
   <ion-toolbar>
     <div class="back-circle"></div>
-    <ion-title class="ion-text-center custom-font">User Registration</ion-title>
+    <ion-title class="ion-text-center custom-font"></ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
 
-  <div class="ion-padding">
+  <div class="content">
 
-    <form [formGroup]="userForm" (ngSubmit)="btnClicked()" class="ion-padding">
+    <div class="img">
+      <img style="width:100px;" src="./assets/diner.png" />
+    </div>
 
-      <div class="wrap-input">
-        <input class="input" type="text" formControlName="firstname" placeholder="Firstname">
-      </div>
+    <div class="ion-padding">
 
-      <div class="wrap-input">
-        <input class="input" type="text"  formControlName="lastname" placeholder="Lastname">
-      </div>
+      <form [formGroup]="userForm" (ngSubmit)="btnClicked()" class="ion-padding">
 
-      <div class="wrap-input">
-        <input class="input" type="text" formControlName="email" placeholder="Email">
-      </div>
+        <div class="wrap-input">
+          <input class="input" type="text" formControlName="firstname" placeholder="Firstname">
+        </div>
 
-      <div class="wrap-input">
-        <input class="input" type="password" formControlName="password" placeholder="Password">
-      </div>
+        <div class="wrap-input">
+          <input class="input" type="text" formControlName="lastname" placeholder="Lastname">
+        </div>
 
-      <div class="container-form-btn">
-        <button (click)="btnClicked()" class="form-btn custom-font">
-         Sign Up
-        </button>
-      </div>
+        <div class="wrap-input">
+          <input class="input" type="text" formControlName="email" placeholder="Email">
+        </div>
 
-    </form>
+        <div class="wrap-input">
+          <input class="input" type="password" formControlName="password" placeholder="Password">
+        </div>
 
+        <div class="container-form-btn">
+          <button (click)="btnClicked()" class="form-btn custom-font">
+            Sign Up
+          </button>
+        </div>
+
+      </form>
+    </div>
 
   </div>
 
@@ -42,8 +48,7 @@
 
 <ion-footer class="ion-no-border">
   <ion-toolbar>
-    <p class="ion-text-center custom-font">Already have an account? 
+    <p class="ion-text-center custom-font">Already have an account?
       <a href="user-login">Sign In</a></p>
   </ion-toolbar>
 </ion-footer>
-

@@ -10,10 +10,13 @@
 // ion-content{
 //   background: #3dc2ff;
 // }
+ion-content{
+  --background: #00ffff;
+}
 
 .background{
   display: flex;
-  background-color: #3dc2ff;
+  flex-direction: column;
   height:100%;
   width: 100%;
   align-items: center;
@@ -27,27 +30,38 @@
 //   align-items: center;
   
 
-img{
-  display: flex;
-  width:250px;
+// img{
+  // display: flex;
+  // width:300px;
   // height:100px;
   // margin-top: 200px;
-  margin-left: 50px; 
-}
+  // margin-left: 20px; 
+// }
 
-.restu{
+// .restu{
+//   display: flex;
+//   flex-direction: row;
+//   font-size: 8px;
+//   margin-top: 400px;
+//   margin-left: -300px;
+//   padding:right;
+//   box-shadow: 0 10px 30px 0px rgba(110, 118, 124, 0.5);
+// }
+
+// .user{
+//   display:flex;
+//   flex-direction: row;
+//   margin-top: 400px;
+//   color:grey;
+//   box-shadow: 0 10px 30px 0px rgba(127, 133, 138, 0.5);
+// }
+
+.left{
   display: flex;
   flex-direction: row;
-  font-size: 8px;
-  margin-top: 400px;
-  margin-left: -300px;
-  box-shadow: 0 10px 30px 0px rgba(110, 118, 124, 0.5);
-}
-
-.user{
-  display:flex;
-  flex-direction: row;
-  margin-top: 400px;
-  color:grey;
-  box-shadow: 0 10px 30px 0px rgba(127, 133, 138, 0.5);
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  color:brown;
+  
 }

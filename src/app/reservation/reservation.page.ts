@@ -78,6 +78,17 @@ export class ReservationPage implements OnInit {
     document.getElementsByName("CheckIndate")[0].setAttribute('min', today); 
     // console.log(today);
   }
+//   public errorMessages = {
+//   email: [
+//     {type: 'required', message:'Email is required'},
+//     {type: 'pattern', message:'Please enter a valid email address'}
+//   ],
+
+//   phone: [
+//     {type: 'required', message:'Phone number is required'},
+//     {type: 'pattern', message:'Please enter a valid phone number'}
+//   ]
+// };
 
   // btnClicked(){}
 

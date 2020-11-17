@@ -11,3 +11,16 @@ ion-button{
     --color:black;
     font-family: Josefin Sans;
   }
+
+  .form-btn{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: yellow;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 50px;
+    border-style: solid;
+    font-family: Josefin Sans;
+    font-size: 16px;
+  }

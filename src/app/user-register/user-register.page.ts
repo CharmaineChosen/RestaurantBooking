@@ -35,7 +35,7 @@ export class UserRegisterPage implements OnInit {
       return firebase.firestore().collection('users').doc(res.user.uid).set({
         firstname: this.userForm.value.firstname,
         lastname: this.userForm.value.lastname,
-        // email: this.userForm.value.email
+        email: this.userForm.value.email
       }).then(() => {
         console.log(res.user);
         this.router.navigateByUrl('/user-login');

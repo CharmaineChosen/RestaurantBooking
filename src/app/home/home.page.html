@@ -4,17 +4,22 @@
 
 <ion-content [fullscreen]="true">
   <div class="background">
-    <img src="./assets/logo.png"/>
+    <div class="img">
+      <img style="width:100px;" src="./assets/diner.png" />
+    </div>
 
-<div class="restu">
-<ion-button routerLink="/sliders" size="large" color="light">Restaurant</ion-button>
-</div>
+    <div class="left">
+      <div class="restu">
+        <ion-button routerLink="/sliders" size="large" color="light">Restaurant</ion-button>
+      </div>
+  
+      <div class="user">
+        <ion-button routerLink="/user-register" size="large" color="light">User</ion-button>
+      </div>
+    </div>
 
-<div class="user">
-<ion-button routerLink="/user-register" size="large" color="light">User</ion-button>
-</div>
+  </div>
 
-</div>
 
 
 
@@ -22,4 +27,3 @@
 
 
 </ion-content>
-
