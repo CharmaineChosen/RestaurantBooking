@@ -46,57 +46,7 @@ export class ExploreRestaurantsPage implements OnInit {
 
 
 
-  initializaJSONData() {
-    // this.jsonData = [
-    //   {
-    //     "name": "Mcdonalds",
-    //     "code": "MC"
-    //   },
-
-    //   {
-    //     "name": "Mythos",
-    //     "code": "MT"
-    //   },
-
-    //   {
-    //     "name": "Galitos",
-    //     "code": "GA"
-    //   },
-
-    //   {
-    //     "name": "Boston",
-    //     "code": "BO"
-    //   },
-
-    //   {
-    //     "name": "Billyg",
-    //     "code": "BG"
-    //   },
-
-    //   {
-    //     "name": "KOI",
-    //     "code": "KO"
-    //   },
-
-    //   {
-    //     "name": "Rocomamas",
-    //     "code": "RO"
-    //   },
-
-    //   {
-    //     "name": "Hussar",
-    //     "code": "HU"
-    //   },
-
-    //   {
-    //     "name": "Thava",
-    //     "code": "TH"
-    //   },
-
-    //   {
-    //     "name": "Sakhumzi",
-    //     "code": "SA"
-    //   }];
-  }
+  initializaJSONData() {}
+  
 
 }

@@ -20,15 +20,7 @@ export class AuthService {
     return firebase.auth().signInWithEmailAndPassword(email, password)
   }
 
-
-  // signUpUser(
-  //   email: string,
-  //   password: string
-  // ): Promise<any> {
-  //   return firebase.auth().createUserWithEmailAndPassword(email, password)
-  // }
-
-  signUpUser(email, password): Promise<any>{
+  signUpUser(email, password): Promise<any> {
     return firebase.auth().createUserWithEmailAndPassword(email, password);
   }
 
@@ -39,39 +31,39 @@ export class AuthService {
     return firebase.auth().createUserWithEmailAndPassword(email, password)
   }
 
-  
+  // Add restaurant
+  registerRestaurant() {
+    return firebase.firestore().collection('restaurants');
+  }
 
-    
-
-  // Add restaurant
-  registerRestaurant() {
-        return firebase.firestore().collection('restaurants');
-      }
-
-    addMenu(){
-      return firebase.firestore().collection('menu');
-    }
-    
+  addMenu() {
+    return firebase.firestore().collection('menu');
+  }
 
   resetPassword(email: string): Promise<void> {
     return firebase.auth().sendPasswordResetEmail(email);
   }
 
-
   logOutUser(): Promise<void> {
     return firebase.auth().signOut();
   }
 
-  bookingStatus(ownerId, userId, value){
-    var db = firebase.firestore();
-    var restaurantRef = db.collection('restaurants').doc(ownerId);
-    var restaurant = Promise.all([
-      restaurantRef.collection('booking-details').doc(userId).set({
-        status: value
-      }, { merge: true }).then(a => {
-        console.log('Changed')
-      })
-    ])
+  bookingStatus(ownerId, userId, value) {
+    firebase.firestore().collection('restaurants').doc(ownerId).collection('booking-details').doc(userId).set({
+      status: value
+    }, { merge: true }
+    ).then(a => {
+      console.log('Changed')
+    })
+    // var db = firebase.firestore();
+    // var restaurantRef = db.collection('restaurants').doc(ownerId);
+    // var restaurant = Promise.all([
+    //   restaurantRef.collection('booking-details').doc(userId).set({
+    //     status: value
+    //   }, { merge: true }).then(a => {
+    //     console.log('Changed')
+    //   })
+    // ])
   }
 
 

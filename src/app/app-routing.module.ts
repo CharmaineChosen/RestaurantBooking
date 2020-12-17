@@ -55,10 +55,10 @@ const routes: Routes = [
     path: 'user-login',
     loadChildren: () => import('./user-login/user-login.module').then( m => m.UserLoginPageModule)
   },
-  {
-    path: 'explore-restaurants',
-    loadChildren: () => import('./explore-restaurants/explore-restaurants.module').then( m => m.ExploreRestaurantsPageModule)
-  },
+  // {
+  //   path: 'explore-restaurants',
+  //   loadChildren: () => import('./explore-restaurants/explore-restaurants.module').then( m => m.ExploreRestaurantsPageModule)
+  // },
   {
     path: 'reservation/:id',
     loadChildren: () => import('./reservation/reservation.module').then( m => m.ReservationPageModule)
@@ -71,10 +71,10 @@ const routes: Routes = [
     path: 'success',
     loadChildren: () => import('./success/success.module').then( m => m.SuccessPageModule)
   },
-  {
-    path: 'dashboard',
-    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
-  },
+  // {
+  //   path: 'dashboard',
+  //   loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  // },
   {
     path: 'user-profile',
     loadChildren: () => import('./user-profile/user-profile.module').then( m => m.UserProfilePageModule)
@@ -87,10 +87,10 @@ const routes: Routes = [
     path: 'settings',
     loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
   },
-  {
-    path: 'add-restaurants',
-    loadChildren: () => import('./add-restaurants/add-restaurants.module').then( m => m.AddRestaurantsPageModule)
-  },
+  // {
+  //   path: 'add-restaurants',
+  //   loadChildren: () => import('./add-restaurants/add-restaurants.module').then( m => m.AddRestaurantsPageModule)
+  // },
   {
     path: 'add-menu',
     loadChildren: () => import('./add-menu/add-menu.module').then( m => m.AddMenuPageModule)
@@ -99,6 +99,30 @@ const routes: Routes = [
     path: 'view-restaurant/:id',
     loadChildren: () => import('./view-restaurant/view-restaurant.module').then( m => m.ViewRestaurantPageModule)
   },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./tabs/tabs.module').then( m => m.TabsPageModule)
+  },
+  {
+    path: 'edit-restaurant/:id',
+    loadChildren: () => import('./edit-restaurant/edit-restaurant.module').then( m => m.EditRestaurantPageModule)
+  },
+  {
+    path: 'my-profile',
+    loadChildren: () => import('./my-profile/my-profile.module').then( m => m.MyProfilePageModule)
+  },
+  {
+    path: 'user-tabs',
+    loadChildren: () => import('./user-tabs/user-tabs.module').then( m => m.UserTabsPageModule)
+  },
+  // {
+  //   path: 'my-user-profile',
+  //   loadChildren: () => import('./my-user-profile/my-user-profile.module').then( m => m.MyUserProfilePageModule)
+  // },
+  // {
+  //   path: 'owner-profile',
+  //   loadChildren: () => import('./owner-profile/owner-profile.module').then( m => m.OwnerProfilePageModule)
+  // },
 ];
 
 @NgModule({

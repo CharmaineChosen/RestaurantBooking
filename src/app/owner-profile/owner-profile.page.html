@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/dashboard"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item routerLink="/my-profile">
+    <ion-label>My Profile</ion-label>
+    <ion-icon name="chevron-forward-outline"></ion-icon>
+  </ion-item>
+  <ion-item routerLink="/profile">
+    <ion-label>Restaurant Profile</ion-label>
+    <ion-icon name="chevron-forward-outline"></ion-icon>
+  </ion-item>
+  <ion-item (click)="logOut()">
+    <ion-label name="log-out-outline">Logout</ion-label>
+    <ion-icon name="chevron-forward-outline"></ion-icon>
+  </ion-item>
+
+</ion-content>

@@ -14,9 +14,9 @@ export class HomePage {
   ngOnInit(){
 
   }
-//   ngAfterViewInit(){
-//     setTimeout(() => {
-//       this.router.navigate(["sliders"]);
-//     },3000);
-//   }
+  // ngAfterViewInit(){
+  //   setTimeout(() => {
+  //     this.router.navigate(["sliders"]);
+  //   },3000);
+  // }
 }
