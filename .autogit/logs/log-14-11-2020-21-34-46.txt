@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Mon Dec 14 2020 21:34:46 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+
+
+Created files:
+* .autogit/logs/log-14-11-2020-20-59-48.txt
+
+
+Deleted files:
+
+
+Renamed files:
