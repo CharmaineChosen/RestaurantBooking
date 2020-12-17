@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons>
-      <ion-back-button defaultHref="explore-restaurants"></ion-back-button>
+      <ion-back-button defaultHref="user-tabs/explore-restaurants"></ion-back-button>
     </ion-buttons>
     <ion-title>{{restaurants?.name}}</ion-title>
   </ion-toolbar>
@@ -66,7 +66,7 @@
 
 
   <div class="container-form-btn">
-    <ion-button [routerLink]="['/reservation/',restaurants.ownerId]">Book a table</ion-button>
+    <ion-button [routerLink]="['/reservation/',restaurants.restId]">Book a table</ion-button>
   </div>
 </ion-content>
 

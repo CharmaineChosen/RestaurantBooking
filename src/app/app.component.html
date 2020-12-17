@@ -1,29 +1,3 @@
 <ion-app>
-  <ion-menu contentId="content1" side="start">
-      <ion-header>
-      <ion-toolbar color="secondary">
-        <ion-icon (click)="logOut()" name="log-out-outline" class="log"></ion-icon>
-        <!-- <ion-button routerLink="/dinehome" color="light"><ion-icon name="home"></ion-icon></ion-button> -->
-        <ion-title class="ion-text-center custom-font">Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-
-      <ion-list>
-        <ion-item routerLink="/user-profile"><ion-icon name="person-outline"></ion-icon>My Profile</ion-item>
-        <ion-item routerLink="/explore-restaurants"><ion-icon name="restaurant-outline"></ion-icon>Explore Restaurants</ion-item>
-        <!-- <ion-item routerLink="/reservation"><ion-icon name="document-text-outline"></ion-icon>Reservation Form</ion-item> -->
-        <ion-item routerLink="/booking-details"><ion-icon name="calendar-outline"></ion-icon>Booking details</ion-item>
-
-        <div style="text-align: center;margin: auto;">
-          <!-- <ion-button (click)="logOut()" color="light" shape="round">Log out</ion-button> -->
-        
-        </div>
-        
-      
-      </ion-list>
-
-    </ion-content>
-  </ion-menu>
-  <ion-router-outlet id="content1" main></ion-router-outlet>
+  <ion-router-outlet></ion-router-outlet>
 </ion-app>

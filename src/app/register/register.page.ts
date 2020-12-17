@@ -3,8 +3,8 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { AuthService } from '../services/auth.service';
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 
 @Component({
@@ -16,53 +16,41 @@ export class RegisterPage implements OnInit {
 
   registerForm: FormGroup;
 
-  // btnClicked(){
-  //   alert('you have successfully registered!')
-  // }
-
-  constructor(private authService:AuthService,private router:Router,
-    private alertCtrl:AlertController, private fb: FormBuilder) { }
+  constructor(private authService: AuthService, private router: Router,
+    private alertCtrl: AlertController, private fb: FormBuilder) { }
 
   ngOnInit() {
-    this.registerForm=this.fb.group({
+    this.registerForm = this.fb.group({
       name: ['', Validators.required],
-     // regnumber: ['',Validators.required],
-      email:  ['',Validators.required],
-     // address: ['',Validators.required],
-      telephone: ['',Validators.required],
-      password: ['',Validators.required]
+      email: ['', Validators.required],
+      telephone: ['', Validators.required],
+      password: ['', Validators.required]
 
     })
   }
 
-
-
- 
-  async btnClicked():Promise<void>{
+  async btnClicked(): Promise<void> {
     this.authService.signUpUser(this.registerForm.value.email, this.registerForm.value.password).
-    then(
-      (res)=>{
-        return firebase.firestore().collection('owners').doc(res.user.uid).set({
-          name: this.registerForm.value.name,
-          telephone: this.registerForm.value.telephone
-        }).then(()=> {
-          console.log(res.user);
-          this.router.navigateByUrl('login'); 
-        })
-
-        
-      },
-      async error => {
-        const alert = await this.alertCtrl.create({
-          message:error.message,
-          buttons:[{text:'ok',role:'cancel'}],
-        });
-        await alert.present();
-      }
-    );
+      then(
+        (res) => {
+          return firebase.firestore().collection('owners').doc(res.user.uid).set({
+            name: this.registerForm.value.name,
+            email: this.registerForm.value.email,
+            password: this.registerForm.value.password,
+            telephone: this.registerForm.value.telephone
+          }).then(() => {
+            console.log(res.user);
+            this.router.navigateByUrl('login');
+          })
+        },
+        async error => {
+          const alert = await this.alertCtrl.create({
+            message: error.message,
+            buttons: [{ text: 'ok', role: 'cancel' }],
+          });
+          await alert.present();
+        }
+      );
   }
 
-  test(){
-
-  }
 }

@@ -1,18 +1,13 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-buttons>
-      <ion-back-button defaultHref="user-tabs/explore-restaurants"></ion-back-button>
+      <ion-back-button defaultHref="tabs/dashboard"></ion-back-button>
     </ion-buttons>
-    <ion-title class="ion-text-center custom-font">User Profile</ion-title>
+    <ion-title class="ion-text-center custom-font">profile</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen>
-
-  <ion-avatar class="ion-margin-start">
-    <!-- <img src="./assets/avatar1.png"> -->
-    <img src="{{user?.img}}">
-  </ion-avatar> 
+<ion-content>
 
   <ion-grid>
 
@@ -20,7 +15,7 @@
       <ion-col>
         <ion-item>
           <ion-label>
-            Firstname: {{user?.firstname}} 
+            Name: {{owners?.name}}
           </ion-label>
         </ion-item>
       </ion-col>
@@ -30,7 +25,7 @@
       <ion-col>
         <ion-item>
           <ion-label>
-           Lastname: {{user?.lastname}} 
+            Telephone: {{owners?.telephone}}
           </ion-label>
         </ion-item>
       </ion-col>
@@ -40,14 +35,12 @@
       <ion-col>
         <ion-item>
           <ion-label>
-            Email: {{user?.email}} 
+            Email: {{owners?.email}}
           </ion-label>
         </ion-item>
       </ion-col>
     </ion-row>
 
   </ion-grid>
-  <!-- <ion-button (click)="newUser()">new user</ion-button> -->
-
 
 </ion-content>

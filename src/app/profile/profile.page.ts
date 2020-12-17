@@ -12,7 +12,9 @@ import 'firebase/auth';
 export class ProfilePage implements OnInit {
 
   ownerId: any;
+  restaurants: Array<any> = [];
   restaurant: any;
+  restId: any;
 
   constructor(private router: Router) { }
 
@@ -21,14 +23,23 @@ export class ProfilePage implements OnInit {
 
     this.ownerId = user.uid;
 
-    firebase.firestore().collection('restaurants').doc(this.ownerId).get().then(snapshot => {
-      this.restaurant = snapshot.data();
+    // fetching all the restaurants to get the unique id
+    firebase.firestore().collection('restaurants').onSnapshot(res => {
+      res.forEach(doc => {
+        this.restaurants.push(Object.assign(doc.data(), {uid:doc.id}))
+        this.restId = {uid:doc.id}.uid
+
+        // fetching a single restaurants
+        firebase.firestore().collection('restaurants').doc(this.restId).get().then(snapshot => {
+          this.restaurant = snapshot.data();
+        })
+      })
     })
+
   }
 
   registerRes(){
     this.router.navigateByUrl('add-restaurants');
-
   }
 
 }

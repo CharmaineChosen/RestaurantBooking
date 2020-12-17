@@ -1,83 +1,75 @@
-
 <ion-header class="ion-no-border">
-  
   <ion-toolbar>
     <ion-buttons>
-      <ion-back-button defaultHref="dashboard"></ion-back-button>
+      <ion-back-button defaultHref="tabs/dashboard"></ion-back-button>
     </ion-buttons>
     <ion-title class="ion-text-center custom-font">profile</ion-title>
   </ion-toolbar>
-
-
 </ion-header>
 
 <ion-content fullscreen>
 
-      <ion-avatar class="ion-margin-start">
-        <img src="{{restaurant?.img}}">
-      </ion-avatar> 
+  <ion-avatar class="ion-margin-start">
+    <img src="{{restaurant?.img}}">
+  </ion-avatar>
 
-      <ion-grid>
+  <ion-grid>
 
-        <ion-row>
-          <ion-col>
-            <ion-item>
-              <ion-label>
-                Restaurant Name: {{restaurant?.name}} 
-              </ion-label>
-            </ion-item>
-          </ion-col>
-        </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>
+            Restaurant Name: {{restaurant?.name}}
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
 
-        <ion-row>
-          <ion-col>
-            <ion-item>
-              <ion-label>
-                Registration Number: {{restaurant?.regnumber}}
-              </ion-label>
-            </ion-item>
-          </ion-col>
-        </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>
+            Registration Number: {{restaurant?.regnumber}}
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
 
-        <ion-row>
-          <ion-col>
-            <ion-item>
-              <ion-label>
-                Restaurant Email: {{restaurant?.email}}
-              </ion-label>
-            </ion-item>
-          </ion-col>
-        </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>
+            Restaurant Email: {{restaurant?.email}}
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
 
-        <ion-row>
-          <ion-col>
-            <ion-item>
-              <ion-label>
-                Address: {{restaurant?.address}}
-              </ion-label>
-            </ion-item>
-          </ion-col>
-        </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>
+            Address: {{restaurant?.address}}
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
 
-        <ion-row>
-          <ion-col>
-            <ion-item>
-              <ion-label>
-                Telephone: {{restaurant?.telephone}}
-              </ion-label>
-            </ion-item>
-          </ion-col>
-        </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>
+            Telephone: {{restaurant?.telephone}}
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
 
-      </ion-grid>
-      
-      <div class="container-form-btn">
-      <ion-button (click)="registerRes()"> add</ion-button>
-    </div>
+  </ion-grid>
 
-    
-    </ion-content>
+  <div class="container-form-btn">
+    <ion-button [routerLink]="'/edit-restaurant/' +restaurant?.restId"> Edit</ion-button>
+  </div>
 
 
-
-
+</ion-content>

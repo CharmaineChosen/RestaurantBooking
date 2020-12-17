@@ -28,7 +28,7 @@ export class LoginPage implements OnInit {
     this.authService.loginUser(this.loginForm.value.email, this.loginForm.value.password).
     then(
       ()=>{
-        this.router.navigateByUrl('dashboard');
+        this.router.navigateByUrl('tabs/dashboard');
       },
       async error => {
         const alert = await this.alertCtrl.create({
