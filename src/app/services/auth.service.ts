@@ -48,8 +48,8 @@ export class AuthService {
     return firebase.auth().signOut();
   }
 
-  bookingStatus(ownerId, userId, value) {
-    firebase.firestore().collection('restaurants').doc(ownerId).collection('booking-details').doc(userId).set({
+  bookingStatus(restId, userId, value) {
+    firebase.firestore().collection('restaurants').doc(restId).collection('booking-details').doc(userId).set({
       status: value
     }, { merge: true }
     ).then(a => {

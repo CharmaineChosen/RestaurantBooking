@@ -13,3 +13,11 @@ ion-button{
       display: flex;
       flex-direction: column;
   }
+
+  ion-title{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+  }

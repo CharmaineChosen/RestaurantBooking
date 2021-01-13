@@ -68,9 +68,9 @@ export class BookingsPage implements OnInit {
     // });
 
   }
-  status(ownerId, userId, status) {
-    this.authService.bookingStatus(ownerId, userId, status);
-    console.log('service', this.authService.bookingStatus(ownerId, userId, status))
+  status(restId, userId, status) {
+    this.authService.bookingStatus(restId, userId, status);
+    console.log('service', this.authService.bookingStatus(restId, userId, status))
   }
 
   // status(){

@@ -42,10 +42,10 @@
         <p *ngIf="a.status == 'Approved'">Status: {{a.status}}</p>
         <p *ngIf="a.status == 'Declined'">Status: {{a.status}}</p>
 
-        <p (click)="status(a.ownerId, a.uid, 'Pending')"></p>
-        <ion-button (click)="status(a.ownerId, a.uid, 'Approved')" color="success" size="small" shape="round"
+        <p (click)="status(a.restId, a.uid, 'Pending')"></p>
+        <ion-button (click)="status(a.restId, a.uid, 'Approved')" color="success" size="small" shape="round"
           name="selected">Confirm</ion-button>
-        <ion-button (click)="status(a.ownerId, a.uid, 'Declined')" color="danger" size="small" shape="round">Decline
+        <ion-button (click)="status(a.restId, a.uid, 'Declined')" color="danger" size="small" shape="round">Decline
         </ion-button>
 
       </ion-card>

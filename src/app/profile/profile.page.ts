@@ -22,9 +22,10 @@ export class ProfilePage implements OnInit {
     var user = firebase.auth().currentUser;
 
     this.ownerId = user.uid;
+    console.log('uid: ', this.ownerId)
 
     // fetching all the restaurants to get the unique id
-    firebase.firestore().collection('restaurants').onSnapshot(res => {
+    firebase.firestore().collection('restaurants').where('ownerId', '==', this.ownerId).onSnapshot(res => {
       res.forEach(doc => {
         this.restaurants.push(Object.assign(doc.data(), {uid:doc.id}))
         this.restId = {uid:doc.id}.uid

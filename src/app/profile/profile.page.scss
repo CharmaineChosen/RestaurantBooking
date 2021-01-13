@@ -16,6 +16,10 @@
 }
 
 ion-button{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   --background:yellow;
   --color:black;
   font-family: Josefin Sans;
