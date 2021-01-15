@@ -1,6 +1,6 @@
 .background{
     display: flex;
-    // background-color: #00ffff;
+    background-color: #EFF5FC;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -68,4 +68,8 @@ form{
 .form-btn:hover{
     background-color: #28333b;
     box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.8);
+}
+
+.buttons{
+    background-color: #EFF5FC;
 }

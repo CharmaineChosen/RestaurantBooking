@@ -1,7 +1,9 @@
 
-    <ion-buttons>
+    <div class="buttons">
+    <ion-buttons slot="start">
       <ion-back-button defaultHref="view-restaurant"></ion-back-button>
     </ion-buttons>
+    </div>
 
 <ion-content>
  <div class="background">
@@ -10,55 +12,55 @@
 
     <form  [formGroup]="reservationForm" (ngSubmit)="submit()" class="ion-padding">
 
-      <ion-item>
+
         <ion-label position="floating">
           Name
         </ion-label>
           <ion-input class="input" type="text" formControlName="firstname"></ion-input>
-      </ion-item>
+     
       
-      <ion-item>
+     
         <ion-label position="floating">
          Lastname
         </ion-label>
             <ion-input class="input" type="text" formControlName="lastname"></ion-input>
-      </ion-item>
+      
    
-      <ion-item>
+    
         <ion-label position="floating">
           Email
         </ion-label>
         <ion-input formControlName="email" inputmode="email"></ion-input>
-      </ion-item>
+     
 
-      <ion-item>
+
         <ion-label position="floating">
           Phone Number
         </ion-label>
         <ion-input class="input" type="number" formControlName="phone"></ion-input>
-      </ion-item>
+      
 
-      <ion-item>
+     
         <ion-label position="floating">
           Number of guests
         </ion-label>
         <ion-input class="input" type="number"  formControlName="guestnumber"></ion-input>
-      </ion-item>
+ 
 
       <label>Reservation</label>
       <label>Date:</label>
-      <ion-item>
+   
         <ion-label position="floating">MM /DD /YYYY</ion-label>
         <ion-datetime (click)="disableData()" name="CheckIndate"  picker-format="YYYY - MM - DD"
             formControlName="date" placeholder="" ngModel required></ion-datetime>
-      </ion-item>
+     
 
       <label>Time:</label>
-      <ion-item>
+     
         <ion-label>hh:mm</ion-label>
         <!-- <ion-datetime displayFormat="HH:mm" formControlName="time" ngModel required></ion-datetime> -->
         <ion-datetime displayFormat=" HH : mm" formControlName="time" ></ion-datetime>
-      </ion-item>
+    
       
 
       <!-- <ion-item>
@@ -70,7 +72,7 @@
       </ion-item> -->
 
       <label>Reservation Type:</label>
-      <ion-item>
+     
         <ion-label>Select</ion-label>
         <ion-select formControlName="reservationtype" ngModel required>
           <ion-select-option value="Dinner">Dinner</ion-select-option>
@@ -78,7 +80,7 @@
           <ion-select-option value="Corporate">Corporate</ion-select-option>
           <ion-select-option value="Other">Other</ion-select-option>
         </ion-select>
-      </ion-item>
+     
 
       <div class="container-form-btn">
         <button class="form-btn custom-font">
