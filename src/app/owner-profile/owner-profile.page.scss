@@ -1,0 +1,38 @@
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: yellowgreen;
+    // justify-content: center;
+    // align-items: center;
+}
+.color{
+    --background:yellow;
+}
+
+.top{
+    display: flex;
+    width: 100%;
+    height: 40%;
+    background-color: rgb(199, 199, 143);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    // border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+
+
+
+.items{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 60%;
+    // background-color: grey;
+    justify-content: center;
+    border-top-left-radius: 20%;
+    // align-items: center;
+    margin-top: -40px;
+}

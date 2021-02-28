@@ -1,25 +1,34 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
+<!-- <ion-header>
+  <ion-toolbar> -->
+    <!-- <ion-buttons style="--background: yellow;" slot="start">
       <ion-back-button defaultHref="tabs/dashboard"></ion-back-button>
-    </ion-buttons>
-    <ion-title>Profile</ion-title>
-  </ion-toolbar>
-</ion-header>
+    </ion-buttons> -->
+
+  <!-- </ion-toolbar>
+</ion-header> -->
 
 <ion-content>
 
+  <!-- <div class="wrapper"> -->
+    <div class="top">
+      <p style="text-align: center; margin-left: 60px; margin-top: 30px;">Manage Accounts</p>
+    </div>
+
+  <div class="items">
+
   <ion-item routerLink="/my-profile">
-    <ion-label>My Profile</ion-label>
+    <ion-icon size="medium" name="person-outline"></ion-icon><ion-label>My Profile</ion-label>
     <ion-icon name="chevron-forward-outline"></ion-icon>
   </ion-item>
   <ion-item routerLink="/profile">
-    <ion-label>Restaurant Profile</ion-label>
+    <ion-icon size="medium" name="restaurant-outline"></ion-icon><ion-label>Restaurant Profile</ion-label>
     <ion-icon name="chevron-forward-outline"></ion-icon>
   </ion-item>
   <ion-item (click)="logOut()">
-    <ion-label name="log-out-outline">Logout</ion-label>
+    <ion-icon size="medium" name="log-out-outline"></ion-icon><ion-label name="log-out-outline">Logout</ion-label>
     <ion-icon name="chevron-forward-outline"></ion-icon>
   </ion-item>
 
+  </div>
+<!-- </div> -->
 </ion-content>

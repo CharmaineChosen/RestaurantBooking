@@ -11,8 +11,12 @@
 //   background: #3dc2ff;
 // }
 ion-content{
-  --background: #00ffff;
+  --background: #57855E;
 }
+
+// .restu{
+//   background-color: yellow;
+// }
 
 .background{
   display: flex;
@@ -64,4 +68,12 @@ ion-content{
   margin-top: 200px;
   color:brown;
   
+}
+
+ion-button{
+  display: flex;
+  flex-direction: row;
+  --background: #F7E652;
+  color: black;
+  width: 120px;
 }

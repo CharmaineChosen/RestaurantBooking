@@ -1,15 +1,20 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar>
-    <ion-buttons>
-      <ion-back-button defaultHref="profile"></ion-back-button>
-    </ion-buttons>
-    <ion-title class="ion-text-center custom-font">Add Restaurants</ion-title>
-  </ion-toolbar>
-</ion-header>
+<!-- <ion-header class="ion-no-border">
+  <ion-toolbar> -->
+    
+  <!-- </ion-toolbar>
+</ion-header> -->
+<ion-buttons>
+  <ion-back-button defaultHref="profile"></ion-back-button>
+</ion-buttons>
 
-<ion-content>
 
-  <div class="ion-padding">
+<ion-content class="background">
+  <div class="background">
+    <p style="text-align: center; font-size: 24px; font-weight: bold; color:white" >Add Restaurants</p>
+
+  
+  <div class="shape">
+  <!-- <div class="ion-padding"> -->
 
     <form [formGroup]="restaurantForm" (ngSubmit)="btnClicked()" class="ion-padding">
 
@@ -62,7 +67,8 @@
     </form>
 
 
+  <!-- </div> -->
   </div>
 
-
+</div>
 </ion-content>

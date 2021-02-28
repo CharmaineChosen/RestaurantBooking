@@ -24,3 +24,18 @@ ion-button{
   --color:black;
   font-family: Josefin Sans;
 }
+
+ion-card{
+  background-color: rgb(199, 199, 143);
+}
+
+.edit{
+  display: flex;
+  font-size: 30px;
+  color: green;
+  margin-left: 10px;
+}
+
+.text{
+  margin-left: 10px;
+}

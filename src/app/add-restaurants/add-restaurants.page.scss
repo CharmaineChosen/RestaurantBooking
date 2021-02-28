@@ -1,28 +1,56 @@
-.container-form-btn {
-    display: flex;
-    justify-content: center;
-    --background:yellow;
-    --color:black;
-    font-family: Josefin Sans;
+// .container-form-btn {
+//     display: flex;
+//     justify-content: center;
+//     --background:yellow;
+//     --color:black;
+//     font-family: Josefin Sans;
+// }
+
+ion-content.background{
+  --background: url(../../assets/blue.jpg) 0 0/100% 100% no-repeat;
+   color: white;
 }
 
 ion-button{
     --background:yellow;
     --color:black;
     font-family: Josefin Sans;
+    width: 80%
   }
 
   .form-btn{
     justify-content: center;
     display: flex;
     flex-direction: column;
-    background-color: yellow;
+    background-color: #F7E652;
     height: 40px;
+    width: 80%;
+    // text-align: center;
     margin-top: 20px;
     border-radius: 50px;
     border-style: solid;
     font-family: Josefin Sans;
     font-size: 16px;
+    margin-left: 30px;
+  }
 
+  // .background{
+    // display: flex;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: rgb(199, 199, 143);
+  //   position: absolute;position: fixed;
 
+  // }
+
+  .shape{
+    // display: flex;
+    width: 98%;
+    height: 80%;
+    background-color:white;
+    z-index: 1;
+     position: absolute;
+    border-top-left-radius: 10%;
+    top: 20%;
+    left: 3%;
   }
