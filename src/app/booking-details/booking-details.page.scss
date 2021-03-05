@@ -2,19 +2,28 @@
    
     display: flex;
     flex-direction: column;
-    // background-color: #3dc2ff;
+    background-color: orangered;
     width: 100%;
     height: 100%;
     justify-content: center;
   
   }
 
-  ion-button{
-    // margin-top: 500px;
-    --background:yellow;
-    --color:black;
-    font-family: Josefin Sans;
+  .top{
+    display: flex;
+    width: 100%;
+    height: 95%;
+    background-color: white;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
   }
+
+  // ion-button{
+  //   // margin-top: 500px;
+  //   --background:yellow;
+  //   --color:black;
+  //   font-family: Josefin Sans;
+  // }
 
   .container-form-btn {
     display: flex;
@@ -22,6 +31,15 @@
 }
 
 ion-card{
-    --background: yellow;
-    width:320px;
+    // --background: yellow;
+    width:90%;
+    height: 30%;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+ion-label{
+  color: black;
+  margin-top: 20px;
+  margin-left: 20px;
 }

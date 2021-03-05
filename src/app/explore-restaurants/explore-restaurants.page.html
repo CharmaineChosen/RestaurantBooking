@@ -1,56 +1,37 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar>
+<!-- <ion-header class="ion-no-border">
+  <ion-toolbar> -->
 
     <!-- <ion-buttons slot="start">
       <ion-menu-button autoHide="false"></ion-menu-button>
     </ion-buttons> -->
 
-    <ion-title class="ion-text-center custom-font">Explore Restaurants</ion-title>
 
-  </ion-toolbar>
+  <!-- </ion-toolbar>
 
-</ion-header>
+</ion-header> -->
 
 
 <ion-content>
 
-  <!-- <ion-toolbar color="light">
-    <ion-searchbar (ionInput)="FilterJSONData($event)"></ion-searchbar>
-  </ion-toolbar> -->
+  <div class="container">
+    <h2 style="font-weight: bold;" class="ion-text-center custom-font">Explore Restaurants</h2>
 
-  <ion-list>
+    <div class="top">
+
+
+
     <ion-item (click)="selectVal(item.name)" *ngFor="let item of jsonData">
       {{item.name}}</ion-item>
-  </ion-list>
+ 
 
   <ion-card *ngFor="let list of listing">
    
       <img src="{{list.img}}" alt="" [routerLink]="'/view-restaurant/'+list?.restId">
-      
-      <!-- <ion-label>ion-item in a card, icon left, button right</ion-label> -->
-      <!-- <ion-button fill="outline" slot="end">View</ion-button> -->
-   
-    <ion-card-subtitle>{{list.name}} - {{list.address}}</ion-card-subtitle>
-  
-    <!-- <ion-card-content>
-      This is content, without any paragraph or header tags,
-      within an ion-card-content element.
-    </ion-card-content> -->
+     
+    <ion-card-subtitle style="color: black; font-size: 18px;" >{{list.name}} - {{list.address}}</ion-card-subtitle>
   </ion-card>
 
+  </div>
 
-  <!-- <div class="background-color">
-
-    <p><img src="assets/img/macD.jpg"></p>
-    <p><img src="assets/img/5.jfif"></p>
-    <p><img src="assets/img/boston.jfif"></p>
-    <p><img src="assets/img/billy.jpg"></p>
-    <p><img src="assets/img/mythos.jfif"></p>
-    <p><img src="assets/img/koi.jfif"></p>
-    <p><img src="assets/img/roco.jfif"></p>
-    <p><img src="assets/img/galitos.jpg"></p>
-    <p><img src="assets/img/hussar.jpg"></p>
-    <p><img src="assets/img/thava.jpg"></p>
-
-  </div> -->
+  </div>
 </ion-content>
