@@ -1,67 +1,123 @@
 
-    <div class="buttons">
+    <!-- <div class="buttons">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="view-restaurant"></ion-back-button>
     </ion-buttons>
-    </div>
+    </div> -->
 
 <ion-content>
  <div class="background">
+
+  <ion-buttons>
+    <ion-back-button defaultHref="view-restaurant"></ion-back-button>
+  </ion-buttons>
+  <h2 style="text-align: center; margin-top: -10px; font-weight: bold;">Table Reservation</h2>
 
   <div class="ion-padding">
 
     <form  [formGroup]="reservationForm" (ngSubmit)="submit()" class="ion-padding">
 
 
-        <ion-label position="floating">
+        <!-- <ion-label position="floating">
           Name
-        </ion-label>
-          <ion-input class="input" type="text" formControlName="firstname"></ion-input>
-     
+        </ion-label> -->
+          <ion-input class="input" type="text" formControlName="firstname" placeholder="Firstname"></ion-input>
+          <div style="color:red;" *ngIf="!firstname?.valid && (firstname?.dirty || firstname?.touched)">
+            <div *ngIf="firstname.errors.required">
+              Firstname is required!
+           </div>
+         </div>
       
-     
-        <ion-label position="floating">
+        <!-- <ion-label position="floating">
          Lastname
-        </ion-label>
-            <ion-input class="input" type="text" formControlName="lastname"></ion-input>
+        </ion-label> -->
+            <ion-input class="input" type="text" formControlName="lastname" placeholder="Lastname"></ion-input>
+            <div style="color:red;" *ngIf="!lastname?.valid && (lastname?.dirty || lastname?.touched)">
+              <div *ngIf="lastname.errors.required">
+                Lastname is required!
+             </div>
+           </div>
       
    
     
-        <ion-label position="floating">
+        <!-- <ion-label position="floating">
           Email
-        </ion-label>
-        <ion-input formControlName="email" inputmode="email"></ion-input>
+        </ion-label> -->
+        <ion-input formControlName="email" inputmode="email" placeholder="Email"></ion-input>
+        <div style="color:red;" *ngIf="isValidInput('email')" class="alert alert-danger">
+          <div *ngIf="reservationForm.controls['email'].errors.required">
+              Email is required
+          </div>
+          <div *ngIf="reservationForm.controls['email'].errors.pattern">
+              Incorrect email format
+          </div>
+      </div>
      
 
 
-        <ion-label position="floating">
+        <!-- <ion-label position="floating">
           Phone Number
-        </ion-label>
-        <ion-input class="input" type="number" formControlName="phone"></ion-input>
+        </ion-label> -->
+        <ion-input class="input" type="number" min="10" max="10" formControlName="phone" placeholder="Phone Number"></ion-input>
+        <div style="color:red;" *ngIf="isValidInput('phone')"
+      class="alert alert-danger">
+      <div *ngIf="reservationForm.controls['phone'].errors.required">
+        Phone number is required!
+      </div>
+
+       <div *ngIf="reservationForm.controls['phone'].errors.maxLength">
+        maxLength is 10
+       </div>
+       </div>
       
 
-     
+<!--      
         <ion-label position="floating">
           Number of guests
-        </ion-label>
-        <ion-input class="input" type="number"  formControlName="guestnumber"></ion-input>
+        </ion-label> -->
+        <ion-input class="input" type="number" min="1" max="3" formControlName="guestnumber" placeholder="Number of guests"></ion-input>
+        <div style="color:red;" *ngIf="isValidInput('guestnumber')"
+      class="alert alert-danger">
+      <div *ngIf="reservationForm.controls['guestnumber'].errors.required">
+        Number of guests is required!
+      </div>
+
+      <div *ngIf="reservationForm.controls['guestnumber'].errors.maxLength">
+        maxLength is 3
+       </div>
+       </div>
  
 
-      <label>Reservation</label>
+      <!-- <label>Reservation</label>
       <label>Date:</label>
    
         <ion-label position="floating">MM /DD /YYYY</ion-label>
         <ion-datetime (click)="disableData()" name="CheckIndate"  picker-format="YYYY - MM - DD"
             formControlName="date" placeholder="" ngModel required></ion-datetime>
-     
+      -->
+      <!-- <label>Date:</label> -->
+      <ion-input formControlName="date" type="date" placeholder="Date"></ion-input>
+      <div style="color:red;" *ngIf="isValidInput('date')"
+      class="alert alert-danger">
+      <div *ngIf="reservationForm.controls['date'].errors.required">
+        date is required
+      </div>
+      </div>
 
-      <label>Time:</label>
+      <!-- <label>Time:</label>
      
-        <ion-label>hh:mm</ion-label>
+        <ion-label>hh:mm</ion-label> -->
         <!-- <ion-datetime displayFormat="HH:mm" formControlName="time" ngModel required></ion-datetime> -->
-        <ion-datetime displayFormat=" HH : mm" formControlName="time" ></ion-datetime>
+        <!-- <ion-datetime displayFormat=" HH : mm" formControlName="time" ></ion-datetime> -->
     
-      
+    <!-- <label>Time:</label>   -->
+    <ion-input formControlName="time" type="time" placeholder="Time"></ion-input>
+    <div style="color:red;" *ngIf="isValidInput('time')"
+    class="alert alert-danger">
+    <div *ngIf="reservationForm.controls['time'].errors.required">
+      Time is required
+    </div>
+    </div>
 
       <!-- <ion-item>
         <ion-label>Table Reservation:</ion-label>
@@ -80,17 +136,35 @@
           <ion-select-option value="Corporate">Corporate</ion-select-option>
           <ion-select-option value="Other">Other</ion-select-option>
         </ion-select>
-     
 
+        <div style="color:red;" *ngIf="isValidInput('reservationtype')"
+        class="alert alert-danger">
+        <div *ngIf="reservationForm.controls['reservationtype'].errors.required">
+          Reservation type is required!
+        </div>
+         <div *ngIf="reservationForm.controls['reservationtype'].errors.pattern">
+          <!-- Categories email format -->
+         </div>
+        </div>
+     
+<!-- 
       <div class="container-form-btn">
         <button class="form-btn custom-font">
           Book a table
         </button>
-      </div>
+      </div> -->
 
     </form>
   </div>
 
+  
+  <div class="container-form-btn">
+    <button class="form-btn custom-font" [disabled]="!reservationForm.valid" (click)="tableBooking()">
+      Book a table
+    </button>
   </div>
+
+  </div>
+  </ion-content>
 
 

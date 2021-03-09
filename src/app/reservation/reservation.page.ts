@@ -44,15 +44,86 @@ export class ReservationPage implements OnInit {
     // })
 
     this.reservationForm = this.fb.group({
-      email: ['', Validators.required],
+      // email: ['', Validators.required],
+      email: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
       firstname: ['', Validators.required],
       lastname: ['', Validators.required],
-      phone: ['', Validators.required],
+      // phone: ['', Validators.required],
+      phone: ['', [Validators.required, Validators.maxLength(10), Validators.maxLength(10), Validators.pattern('^[0-9]+$')]],
       date: ['', Validators.required],
       time: ['', Validators.required],
-      guestnumber: ['', Validators.required],
+      // guestnumber: ['', Validators.required],
+      guestnumber: ['', [Validators.required, Validators.maxLength(3), Validators.maxLength(3), Validators.pattern('^[0-9]+$')]],
       reservationtype: ['', Validators.required]
     })
+  }
+
+  isValidInput(fieldName): boolean {
+    return this.reservationForm.controls[fieldName].invalid &&
+      (this.reservationForm.controls[fieldName].dirty || this.reservationForm.controls[fieldName].touched);
+  }
+
+  get phone() {
+    return this.reservationForm.get("phone");
+  }
+
+  get guestnumber() {
+    return this.reservationForm.get("guestnumer");
+  }
+
+  get firstname() {
+    return this.reservationForm.get("firstname");
+  }
+
+  get lastname() {
+    return this.reservationForm.get("lastname");
+  }
+
+  get email() {
+    return this.reservationForm.get("email");
+  }
+
+  get date() {
+    return this.reservationForm.get("date");
+  }
+
+  
+  get time() {
+    return this.reservationForm.get("time");
+  }
+
+
+  get reservationtype() {
+    return this.reservationForm.get("reservationtype");
+  }
+
+
+
+  public errorMessages = {
+    phone: [
+      { type: 'required', message: 'phone is required' }
+    ],
+
+
+    guestnumber: [
+      { type: 'required', message: 'guests number is required' }
+    ],
+
+    firstname:[
+      { type: 'required', message: 'firstname is required' }
+    ],
+
+    lastname:[
+      { type: 'required', message: 'lastname is required' }
+    ],
+
+    email:[
+      { type: 'required', message: 'email is required' }
+    ],
+
+    reservationtype:[
+      { type: 'required', message: 'reservation type is required' }
+    ]
   }
 
   submit() {
@@ -93,6 +164,10 @@ export class ReservationPage implements OnInit {
     var today = new Date().toISOString().split('T')[0];
     document.getElementsByName("CheckIndate")[0].setAttribute('min', today);
     // console.log(today);
+  }
+
+  tableBooking(){
+    
   }
   //   public errorMessages = {
   //   email: [

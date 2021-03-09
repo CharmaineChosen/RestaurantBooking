@@ -1,14 +1,20 @@
 .background{
-    display: flex;
-    background-color: #EFF5FC;
+    // display: flex;
+    background-color: orangered;
     width: 100%;
-    align-items: center;
-    justify-content: center;
+    height: 100%;
+    // align-items: center;
+    // justify-content: center;
   }
 
-  ion-padding{
+  .ion-padding{
       width: 100%;
-      height: 100%;
+      height: 75%;
+      background-color: white;
+      border-top-left-radius: 10%;
+    //   border-top-right-radius: 10%;
+      border-bottom-left-radius: 10%;
+      border-bottom-right-radius: 10%;
   }
 
   
@@ -17,10 +23,10 @@ p{
     
 }
 
-form{
-   width: 100%;
-   height: 100%;
-}
+// form{
+//    width: 100%;
+//    height: 100%;
+// }
 
 .wrap-input{
     background-color: rgba(255, 255, 255, .8);
@@ -38,7 +44,7 @@ form{
     line-height: 1.2;
     border: none;
     outline: none;
-    height: 46px;
+    height: 40px;
     padding: 0 20px 0 23px;
 }
 
@@ -52,11 +58,12 @@ form{
     justify-content: center;
     align-items: center;
     padding: 0 20px;
-    min-width: 160px;
+    // min-width: 160px;
+    width: 70%;
     height: 42px;
     margin-top:20px;
-    background-color: yellow;
-    border-radius: 20px;
+    background-color: rgb(88, 87, 87);
+    border-radius: 10px;
     font-size: 14px;
     color:grey;
     text-transform: uppercase;
