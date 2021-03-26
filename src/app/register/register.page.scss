@@ -1,7 +1,6 @@
 
 p{
-    font-weight: 800px;
-    
+    font-weight: 800px;   
 }
 
 form{
@@ -15,16 +14,16 @@ form{
     box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.12);
 }
 
-.content{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: absolute;
-    align-items: center;
-    margin-top: -85px;
-}
+// .content{
+//     height: 100%;
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     position: absolute;
+//     align-items: center;
+//     margin-top: -85px;
+// }
 
 .input {
     display: block;
@@ -66,9 +65,9 @@ form{
     box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.8);
 }
 
-ion-padding{
-    justify-self: center; 
-}
+// ion-padding{
+//     justify-self: center; 
+// }
 
 .design{
     width: 100%;

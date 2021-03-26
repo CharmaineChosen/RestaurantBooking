@@ -33,6 +33,16 @@
 
   ion-button{
     --background:  #F7E652;
+  }
 
-
+  .edit{
+    width: 200px;
+    height: 50px;
+    background-color: #F7E652;
+    color: black;
+    border-style: solid 3px;
+    margin-left: 40px;
+    margin-top: 20px;
+    border-radius: 40px;
+    font-size: 18px;
   }
