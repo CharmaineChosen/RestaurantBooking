@@ -1,60 +1,59 @@
-<!-- <ion-header class="ion-no-border"> -->
-  <!-- <ion-toolbar>
+<!-- <ion-header class="ion-no-border">
+  <ion-toolbar>
     <div class="back-circle"></div>
     <ion-title class="ion-text-center custom-font"></ion-title>
-  </ion-toolbar> -->
-<!-- </ion-header> -->
+  </ion-toolbar>
+</ion-header> -->
 
 <ion-content>
-  <div class="design"></div>
-    
-  <div class="img">
-    <img style="width:30%; height: 10%;" src="./assets/diner.png" />
-  </div>
 
   <div class="content">
+<<<<<<< HEAD
   
     <div>
-      <form [formGroup]="registerForm" (ngSubmit)="btnClicked()" class="ion-padding">
-  
-        <div class="wrap-input">
-          <input class="input" type="text" formControlName="name" name="name" placeholder="Name" ngModel required>
-        </div>
-  
-        <div class="wrap-input">
-          <input class="input" type="text" formControlName="email" name="email" placeholder="Email" ngModel required>
-        </div>
-  
-        <div class="wrap-input">
-          <input class="input" type="text" formControlName="telephone" name="telephone" placeholder="Telephone Number"
-            maxlength="10" ngModel required>
-        </div>
-  
-        <div class="wrap-input">
-          <input class="input" type="password" formControlName="password" name="password" placeholder="Password" ngModel
-            required>
-        </div>
-  
-        <div class="container-form-btn">
-          <button class="form-btn custom-font">
-            Register
-          </button>
-        </div>
-  
-      </form>
+=======
+
+    <div class="img">
+      <img style="width:100px;" src="./assets/diner.png" />
     </div>
 
-    <p class="ion-text-center custom-font">Already have an account?
-      <a href="login">Sign In</a></p>
+    <div class="ion-padding">
+
+>>>>>>> 1e9a2f7d41992d8af7b46db85fc2e924ec83766b
+      <form [formGroup]="registerForm" (ngSubmit)="btnClicked()" class="ion-padding">
+
+        <div class="wrap-input">
+          <input class="input" type="text" formControlName="name" placeholder="Name">
+        </div>
+
+        <div class="wrap-input">
+          <input class="input" type="text" formControlName="email" placeholder="Email">
+        </div>
+
+        <div class="wrap-input">
+          <input class="input" type="text" formControlName="telephone" placeholder="Telephone Number">
+        </div>
+
+        <div class="wrap-input">
+          <input class="input" type="password" formControlName="password" placeholder="Password">
+        </div>
+
+        <div class="container-form-btn">
+          <button (click)="btnClicked()" class="form-btn custom-font">
+            Sign Up
+          </button>
+        </div>
+
+      </form>
+    </div>
 
   </div>
 
 </ion-content>
 
-
-<!-- <ion-footer class="ion-no-border">
-  <ion-toolbar> -->
-    <!-- <p class="ion-text-center custom-font">Already have an account?
-      <a href="login">Sign In</a></p> -->
-  <!-- </ion-toolbar>
-</ion-footer> -->
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <p class="ion-text-center custom-font">Already have an account?
+      <a href="login">Sign In</a></p>
+  </ion-toolbar>
+</ion-footer>

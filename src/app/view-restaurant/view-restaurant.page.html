@@ -1,38 +1,44 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-buttons>
       <ion-back-button defaultHref="user-tabs/explore-restaurants"></ion-back-button>
     </ion-buttons>
     <ion-title style="text-align: center;">{{restaurants?.name}}</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
+
+  <ion-buttons>
+    <ion-back-button defaultHref="user-tabs/explore-restaurants"></ion-back-button>
+  </ion-buttons>
+
+  <h2 style="text-align: center; margin-top: -10px;">{{restaurants?.name}}</h2>
 
   <ion-card>
     
       <img style="width: 100%; height: 150px;" src="{{restaurants?.img}}" alt="">
     
 
-    <ion-item>
-      <ion-label><b>Restaurant Name:</b>  {{restaurants?.name}}</ion-label>
-    </ion-item>
 
-    <ion-item>
-      <ion-label><b>Registration Number:</b>  {{restaurants?.regnumber}}</ion-label>
-    </ion-item>
+      <ion-label style="color: black; font-size: 18px; margin-left: 10px;" ><b>Restaurant Name:</b>  {{restaurants?.name}}</ion-label>
 
-    <ion-item>
-      <ion-label><b>Address:</b>  {{restaurants?.address}}</ion-label>
-    </ion-item>
+   <br/>
 
-    <ion-item>
-      <ion-label><b>Email:</b>  {{restaurants?.email}}</ion-label>
-    </ion-item>
+      <ion-label style="color: black; font-size: 18px; margin-left: 10px;" ><b>Registration Number:</b>  {{restaurants?.regnumber}}</ion-label>
+    <br/>
 
-    <ion-item>
-      <ion-label><b>Telephone Number:</b>  {{restaurants?.telephone}}</ion-label>
-    </ion-item>
+ 
+      <ion-label style="color: black; font-size: 18px; margin-left: 10px;"><b>Address:</b>  {{restaurants?.address}}</ion-label>
+    <br/>
+
+    
+      <ion-label style="color: black; font-size: 18px; margin-left: 10px;"><b>Email:</b>  {{restaurants?.email}}</ion-label>
+    <br/>
+
+
+      <ion-label style="color: black; font-size: 18px; margin-left: 10px;"><b>Telephone Number:</b>  {{restaurants?.telephone}}</ion-label>
+
   </ion-card>
 
   <ion-list *ngFor="let meal of menus">
@@ -66,7 +72,7 @@
 
 
   <div class="container-form-btn">
-    <ion-button [routerLink]="['/reservation/',restaurants.restId]">Book a table</ion-button>
+    <ion-button [routerLink]="['/reservation/',restaurants.restId]" shape="round">Book a table</ion-button>
   </div>
 </ion-content>
 

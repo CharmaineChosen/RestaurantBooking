@@ -1,34 +1,45 @@
-<ion-header class="ion-no-border">
+<!-- <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-buttons>
       <ion-back-button defaultHref="daily-dishes"></ion-back-button>
     </ion-buttons>
     <ion-title class="ion-text-center custom-font">Add Menu</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content>
+<ion-content class="container">
 
-  <div class="ion-padding">
+  <div class="container">
+    <ion-buttons>
+      <ion-back-button defaultHref="daily-dishes"></ion-back-button>
+    </ion-buttons>
+
+    <h2 style="text-align: center; font-weight: bold;">Add Menu</h2>
+
+    <div class="bottom">
 
     <form [formGroup]="menuForm" (ngSubmit)="btnClicked()" class="ion-padding">
+
+      <div class="align">
   
       <div class="wrap-input">
-        <ion-item>
-          <ion-input type="text" formControlName="name" placeholder="Dish Name" ngModel required ></ion-input>
-        </ion-item>
+
+          <ion-input style="margin-top: 20px;" type="text" formControlName="name" placeholder="Dish Name" ngModel required ></ion-input>
+    
       </div>
   
       <div class="wrap-input">
-        <ion-item>
-          <ion-input type="number"  formControlName="price" placeholder="Price" maxlength="3" ngModel required></ion-input>
-        </ion-item>
+   
+          <ion-input style="margin-top: 20px;" type="number"  formControlName="price" placeholder="Price" maxlength="3" ngModel required></ion-input>
+    
       </div>
   
       <div class="wrap-input">
         
-          <ion-input type="file" formControlName="img" accept="image/*" (change)="onselected($event)"></ion-input>
+          <ion-input style="margin-top: 20px;" type="file" formControlName="img" accept="image/*" (change)="onselected($event)"></ion-input>
         
+      </div>
+
       </div>
   
       <div class="container-form-btn">
@@ -39,6 +50,7 @@
   
     </form>
   
+  </div>
   </div>
   
 

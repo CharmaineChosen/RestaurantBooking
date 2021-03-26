@@ -14,6 +14,7 @@ form{
     box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.12);
 }
 
+<<<<<<< HEAD
 // .content{
 //     height: 100%;
 //     width: 100%;
@@ -24,6 +25,15 @@ form{
 //     align-items: center;
 //     margin-top: -85px;
 // }
+=======
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+>>>>>>> 1e9a2f7d41992d8af7b46db85fc2e924ec83766b
 
 .input {
     display: block;
@@ -48,7 +58,7 @@ form{
     justify-content: center;
     align-items: center;
     padding: 0 20px;
-    min-width: 160px;
+    width: 100%;
     height: 42px;
     background-color: yellow;
     border-radius: 20px;
@@ -69,24 +79,23 @@ form{
 //     justify-self: center; 
 // }
 
-.design{
-    width: 100%;
-    height: 30%;
-    background-color: #57855E;
-    // position: absolute;
-    border-bottom-left-radius: 90%;
-    border-bottom-right-radius: 80%;
-}
+// ion-content{
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+// }
 
-.img{
-    // height: 10%;
-    // width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -50px;
-    // background-color: grey;
-    // border-bottom-left-radius: 100%;
-    // border-bottom-right-radius: 100%;
-}
 
+// .img{
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     margin-top: 80px;
+//   display: flex;
+//   flex-direction: column;
+//   justify-self: center;
+//   width:100px;
+//   background-color: black;
+// }

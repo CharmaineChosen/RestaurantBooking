@@ -1,13 +1,23 @@
-<ion-header class="ion-no-border">
+<!-- <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-buttons>
       <ion-back-button defaultHref="dashboard"></ion-back-button>
     </ion-buttons>
     <ion-title class="ion-text-center custom-font">Daily Dishes</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
+
+  <div class="background">
+
+    <ion-buttons>
+      <ion-back-button defaultHref="dashboard"></ion-back-button>
+    </ion-buttons>
+
+    <h2 style="text-align: center; color: white;">Daily Dishes</h2>
+
+ 
 
   <ion-grid>
 
@@ -44,6 +54,7 @@
     </ion-card>
 
   </ion-grid>
+  </div>
 
   <div class="container-form-btn">
   <ion-button (click)="addMenus()">Add a dish</ion-button>

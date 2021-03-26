@@ -1,46 +1,64 @@
-<ion-header class="ion-no-border">
+<!-- <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-buttons>
       <ion-back-button defaultHref="tabs/dashboard"></ion-back-button>
     </ion-buttons>
     <ion-title class="ion-text-center custom-font">profile</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
+  <div class="container">
+
+    <ion-buttons>
+      <ion-back-button defaultHref="tabs/dashboard"></ion-back-button>
+    </ion-buttons>
+
+    <h2 style="text-align: center; font-size: 18px;" >Profile</h2>
+
+    <div class="middle">
+
+      
+  <ion-avatar style="margin-top: -20px;" class="ion-margin-start">
+    <!-- <img src="./assets/avatar1.png"> -->
+    <img src="{{owner?.img}}">
+  </ion-avatar> 
+    <!-- <ion-icon name="create-outline"></ion-icon> -->
 
   <ion-grid>
 
     <ion-row>
       <ion-col>
-        <ion-item>
+        <!-- <ion-item> -->
           <ion-label>
             Name: {{owners?.name}}
           </ion-label>
-        </ion-item>
+        <!-- </ion-item> -->
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col>
-        <ion-item>
+        <!-- <ion-item> -->
           <ion-label>
             Telephone: {{owners?.telephone}}
           </ion-label>
-        </ion-item>
+        <!-- </ion-item> -->
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col>
-        <ion-item>
+        <!-- <ion-item> -->
           <ion-label>
             Email: {{owners?.email}}
           </ion-label>
-        </ion-item>
+        <!-- </ion-item> -->
       </ion-col>
     </ion-row>
 
   </ion-grid>
 
+  </div>
+</div>
 </ion-content>
