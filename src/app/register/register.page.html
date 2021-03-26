@@ -8,52 +8,48 @@
 <ion-content>
 
   <div class="content">
-<<<<<<< HEAD
-  
-    <div>
-=======
 
-    <div class="img">
-      <img style="width:100px;" src="./assets/diner.png" />
+      <div class="img">
+        <img style="width:100px;" src="./assets/diner.png" />
+      </div>
+
+      <div class="ion-padding">
+
+        <form [formGroup]="registerForm" (ngSubmit)="btnClicked()" class="ion-padding">
+
+          <div class="wrap-input">
+            <input class="input" type="text" formControlName="name" placeholder="Name">
+          </div>
+
+          <div class="wrap-input">
+            <input class="input" type="text" formControlName="email" placeholder="Email">
+          </div>
+
+          <div class="wrap-input">
+            <input class="input" type="text" formControlName="telephone" placeholder="Telephone Number">
+          </div>
+
+          <div class="wrap-input">
+            <input class="input" type="password" formControlName="password" placeholder="Password">
+          </div>
+
+          <div class="container-form-btn">
+            <button (click)="btnClicked()" class="form-btn custom-font">
+              Sign Up
+            </button>
+          </div>
+
+        </form>
+      </div>
+
     </div>
-
-    <div class="ion-padding">
-
->>>>>>> 1e9a2f7d41992d8af7b46db85fc2e924ec83766b
-      <form [formGroup]="registerForm" (ngSubmit)="btnClicked()" class="ion-padding">
-
-        <div class="wrap-input">
-          <input class="input" type="text" formControlName="name" placeholder="Name">
-        </div>
-
-        <div class="wrap-input">
-          <input class="input" type="text" formControlName="email" placeholder="Email">
-        </div>
-
-        <div class="wrap-input">
-          <input class="input" type="text" formControlName="telephone" placeholder="Telephone Number">
-        </div>
-
-        <div class="wrap-input">
-          <input class="input" type="password" formControlName="password" placeholder="Password">
-        </div>
-
-        <div class="container-form-btn">
-          <button (click)="btnClicked()" class="form-btn custom-font">
-            Sign Up
-          </button>
-        </div>
-
-      </form>
-    </div>
-
-  </div>
 
 </ion-content>
 
 <ion-footer class="ion-no-border">
   <ion-toolbar>
     <p class="ion-text-center custom-font">Already have an account?
-      <a href="login">Sign In</a></p>
+      <a href="login">Sign In</a>
+    </p>
   </ion-toolbar>
 </ion-footer>
